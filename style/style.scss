@@ -69,3 +69,123 @@ $medium: 500;
 
 // styling
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: absolute;
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 104px;
+    width: 1px;
+    margin-bottom: 60px;
+    background-color: $Light-Grey;
+  }
+  & span {
+    font-size: $font-size-body;
+    font-weight: $medium;
+    letter-spacing: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $Light-Grey;
+    transform: rotate(90deg);
+  }
+}
+
+.container {
+  margin: 0 165px;
+  border: 1px solid red;
+  //   style the header
+  .header {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: auto 316px 1fr;
+
+    .logo {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 64px;
+      grid-row: 1/2;
+      grid-column: 2/3;
+
+      & > a {
+        text-decoration: none;
+        font-size: $font-size-body;
+        line-height: 25px;
+        font-weight: $bold;
+        color: $Dark-Grey;
+      }
+    }
+    .carousel {
+      background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat
+        top center/cover;
+      grid-row: 2/3;
+      grid-column: 1/4;
+      margin-top: 56px;
+      height: 720px;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .filter {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $Very-Dark-Blue;
+        opacity: 0.4;
+      }
+      .carousel-content {
+        width: 554px;
+        margin-left: 190px;
+        z-index: 10;
+        .main-heading {
+          font-size: $font-size-h1-S;
+          font-weight: $bold;
+          color: $white;
+        }
+        .text {
+          font-size: $font-size-body;
+          line-height: 25px;
+          width: 445px;
+          color: $Very-Light-Grey;
+          margin-top: 14px;
+        }
+
+        // style btn list item
+        .btn-list {
+          list-style: none;
+          position: absolute;
+          bottom: 0;
+          left: -80px;
+          padding: 0;
+          margin: 0;
+          & > li {
+            margin: -2px;
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}

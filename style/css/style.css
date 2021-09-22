@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+.cta {
+  border: none;
+  height: 72px;
+  padding: 0 24px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.cta .icon-arrow {
+  fill: none;
+  stroke: #fff;
+  width: 26px;
+  height: 20px;
+  margin-left: 24px;
+}
+
+.cta.btn-normal {
+  color: #fff;
+  background-color: #1b1d23;
+}
+
+.tertiary {
+  border: none;
+  width: 80px;
+  height: 80px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.tertiary.btn-normal {
+  color: #60636c;
+  background-color: #f0f0f5;
+}
+
+.tertiary.btn-active {
+  color: #c9cdd9;
+  background-color: #1b1d23;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: absolute;
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar:before {
+  content: '';
+  display: inline-block;
+  height: 104px;
+  width: 1px;
+  margin-bottom: 60px;
+  background-color: #c9cdd9;
+}
+
+.sidebar span {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 15px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #c9cdd9;
+  transform: rotate(90deg);
+}
+
+.container {
+  margin: 0 165px;
+  border: 1px solid red;
+}
+
+.container .header {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: auto 316px 1fr;
+}
+
+.container .header .logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.container .header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 64px;
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.container .header .nav > a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #60636c;
+}
+
+.container .header .carousel {
+  background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat top center/cover;
+  grid-row: 2/3;
+  grid-column: 1/4;
+  margin-top: 56px;
+  height: 720px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container .header .carousel .filter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #1b1d23;
+  opacity: 0.4;
+}
+
+.container .header .carousel .carousel-content {
+  width: 554px;
+  margin-left: 190px;
+  z-index: 10;
+}
+
+.container .header .carousel .carousel-content .main-heading {
+  font-size: 80px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.container .header .carousel .carousel-content .text {
+  font-size: 15px;
+  line-height: 25px;
+  width: 445px;
+  color: #f0f0f5;
+  margin-top: 14px;
+}
+
+.container .header .carousel .carousel-content .btn-list {
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+  padding: 0;
+  margin: 0;
+}
+
+.container .header .carousel .carousel-content .btn-list > li {
+  margin: -2px;
+  display: inline;
+}
