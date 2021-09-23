@@ -66,24 +66,6 @@
   opacity: 0.4;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  box-sizing: border-box;
-  font-family: 'Spartan', sans-serif;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-
 .sidebar {
   position: absolute;
   top: 0;
@@ -111,31 +93,14 @@ p {
   transform: rotate(90deg);
 }
 
-.container {
-  margin: 0 120px;
-}
-
-.container .header {
-  margin-top: 64px;
-  display: grid;
-  grid-template-columns: auto 316px 1fr;
-}
-
-.container .header .logo {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-.container .header .nav {
+.nav {
+  margin-left: 94px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-left: 64px;
-  grid-row: 1/2;
-  grid-column: 2/3;
 }
 
-.container .header .nav > a {
+.nav > a {
   text-decoration: none;
   font-size: 15px;
   line-height: 25px;
@@ -143,10 +108,71 @@ p {
   color: #60636c;
 }
 
-.container .header .carousel {
+.header {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo {
+  fill: #1b1d23;
+  width: 97px;
+  height: 40px;
+}
+
+.footer {
+  width: 85%;
+  height: 200px;
+  background-color: #f0f0f5;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.footer .cta {
+  position: absolute;
+  right: -18%;
+}
+
+.footer .logo-wraper {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  background-color: #1b1d23;
+  display: grid;
+  place-items: center;
+}
+
+.footer .logo-wraper .logo {
+  fill: #fff;
+  width: 97px;
+  height: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 120px;
+}
+
+.container .main .carousel {
   background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat top center/cover;
-  grid-row: 2/3;
-  grid-column: 1/4;
   margin-top: 56px;
   height: 720px;
   width: 100%;
@@ -155,19 +181,19 @@ p {
   align-items: center;
 }
 
-.container .header .carousel .carousel-content {
+.container .main .carousel .carousel-content {
   width: 554px;
   margin-left: 190px;
   z-index: 10;
 }
 
-.container .header .carousel .carousel-content .heading-small {
+.container .main .carousel .carousel-content .heading-small {
   font-size: 80px;
   font-weight: 700;
   color: #fff;
 }
 
-.container .header .carousel .carousel-content .text {
+.container .main .carousel .carousel-content .text {
   font-size: 15px;
   line-height: 25px;
   width: 445px;
@@ -175,11 +201,11 @@ p {
   margin-top: 14px;
 }
 
-.container .header .carousel .carousel-content .cta {
+.container .main .carousel .carousel-content .cta {
   margin-top: 40px;
 }
 
-.container .header .carousel .carousel-content .btn-list {
+.container .main .carousel .carousel-content .btn-list {
   list-style: none;
   position: absolute;
   display: flex;
