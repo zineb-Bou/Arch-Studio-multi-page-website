@@ -63,7 +63,7 @@
   height: 100%;
   width: 100%;
   background-color: #1b1d23;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 * {
@@ -253,7 +253,7 @@ p {
   justify-content: center;
 }
 
-.container .main .about-us-section .about-title {
+.container .main .about-us-section .title {
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -2px;
@@ -269,4 +269,86 @@ p {
   margin-left: 190px;
   width: 187px;
   margin-top: 32px;
+}
+
+.container .main .protfolio-section .protfolio-section__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.container .main .protfolio-section .title {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 56px;
+  color: #1b1d23;
+}
+
+.container .main .protfolio-section .cta {
+  width: 169px;
+}
+
+.container .main .protfolio-gallery {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+  margin-bottom: 200px;
+}
+
+.container .main .protfolio-gallery .clickable-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.container .main .protfolio-gallery .clickable-card .large-number {
+  font-size: 12rem;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.container .main .protfolio-gallery .clickable-card .project-name {
+  display: block;
+  margin-left: 40px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 1;
+}
+
+.container .main .protfolio-gallery .clickable-card .view-all-tag {
+  display: block;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  color: #fff;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.container .main .protfolio-gallery .clickable-card:nth-child(1) {
+  background: url(/assets/portfolio/desktop/image-228b.jpg) no-repeat center center/cover;
+  height: 560px;
+  width: 350px;
+}
+
+.container .main .protfolio-gallery .clickable-card:nth-child(2) {
+  background: url(/assets/portfolio/desktop/image-del-sol.jpg) no-repeat center center/cover;
+  height: 560px;
+  width: 350px;
+}
+
+.container .main .protfolio-gallery .clickable-card:nth-child(3) {
+  background: url(/assets/portfolio/desktop/image-edelweiss.jpg) no-repeat center center/cover;
+  height: 560px;
+  width: 350px;
 }
