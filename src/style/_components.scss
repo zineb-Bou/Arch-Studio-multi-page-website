@@ -4,7 +4,6 @@
   border: none;
   height: 72px;
   padding: 0 24px;
-  margin-top: 40px;
   //   layouts
   display: flex;
   align-items: center;
@@ -56,4 +55,12 @@
   &::first-letter {
     text-transform: uppercase;
   }
+}
+
+.filter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $Very-Dark-Blue;
+  opacity: 0.5;
 }

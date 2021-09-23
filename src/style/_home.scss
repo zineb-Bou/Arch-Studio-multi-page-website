@@ -81,14 +81,6 @@ p {
       position: relative;
       display: flex;
       align-items: center;
-
-      .filter {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: $Very-Dark-Blue;
-        opacity: 0.4;
-      }
       .carousel-content {
         width: 554px;
         margin-left: 190px;
@@ -105,7 +97,9 @@ p {
           color: $Very-Light-Grey;
           margin-top: 14px;
         }
-
+        .cta {
+          margin-top: 40px;
+        }
         // style btn list item
         .btn-list {
           list-style: none;
@@ -165,6 +159,36 @@ p {
         margin-top: -80px;
         justify-self: end;
         align-self: end;
+      }
+    }
+
+    // about us section
+    .about-us-section {
+      background: url(/assets/home/desktop/image-small-team.jpg) no-repeat
+        center center/cover;
+      width: 100%;
+      height: 560px;
+      position: relative;
+      margin-top: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .about-title {
+        font-size: $font-size-h2;
+        font-weight: $bold;
+        letter-spacing: -2px;
+        line-height: 56px;
+        width: 445px;
+        margin-left: 190px;
+        color: $white;
+        z-index: 1;
+      }
+      .cta {
+        z-index: 1;
+        margin-left: 190px;
+        width: 187px;
+        margin-top: 32px;
       }
     }
   }

@@ -4,7 +4,6 @@
   border: none;
   height: 72px;
   padding: 0 24px;
-  margin-top: 40px;
   display: flex;
   align-items: center;
   font-family: 'Spartan', sans-serif;
@@ -57,6 +56,14 @@
 
 .heading--large::first-letter {
   text-transform: uppercase;
+}
+
+.filter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #1b1d23;
+  opacity: 0.5;
 }
 
 * {
@@ -148,14 +155,6 @@ p {
   align-items: center;
 }
 
-.container .header .carousel .filter {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #1b1d23;
-  opacity: 0.4;
-}
-
 .container .header .carousel .carousel-content {
   width: 554px;
   margin-left: 190px;
@@ -174,6 +173,10 @@ p {
   width: 445px;
   color: #f0f0f5;
   margin-top: 14px;
+}
+
+.container .header .carousel .carousel-content .cta {
+  margin-top: 40px;
 }
 
 .container .header .carousel .carousel-content .btn-list {
@@ -237,4 +240,33 @@ p {
   margin-top: -80px;
   justify-self: end;
   align-self: end;
+}
+
+.container .main .about-us-section {
+  background: url(/assets/home/desktop/image-small-team.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 560px;
+  position: relative;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .main .about-us-section .about-title {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 56px;
+  width: 445px;
+  margin-left: 190px;
+  color: #fff;
+  z-index: 1;
+}
+
+.container .main .about-us-section .cta {
+  z-index: 1;
+  margin-left: 190px;
+  width: 187px;
+  margin-top: 32px;
 }
