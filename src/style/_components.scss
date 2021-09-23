@@ -1,0 +1,59 @@
+@import 'varaibles'; // components
+//  1* buttons
+.cta {
+  border: none;
+  height: 72px;
+  padding: 0 24px;
+  margin-top: 40px;
+  //   layouts
+  display: flex;
+  align-items: center;
+  //   fonts
+  font-family: 'Spartan', sans-serif;
+  font-weight: $bold;
+  font-size: $font-size-body;
+  line-height: 25px;
+  .icon-arrow {
+    //   btn icon
+    fill: none;
+    stroke: $white;
+    width: 26px;
+    height: 20px;
+    margin-left: 24px;
+  }
+  &.btn--normal {
+    color: $white;
+    background-color: $Very-Dark-Blue;
+  }
+}
+.tertiary {
+  border: none;
+  width: 80px;
+  height: 80px;
+  //   fonts
+  font-family: 'Spartan', sans-serif;
+  font-weight: $bold;
+  font-size: $font-size-h3;
+  line-height: 25px;
+  &.btn--normal {
+    color: $Medium-Grey;
+    background-color: $white;
+  }
+  &.btn--active {
+    color: $Light-Grey;
+    background-color: $Very-Dark-Blue;
+  }
+}
+
+// Titles
+.heading--large {
+  display: inline-block;
+  font-size: $font-size-h1-L;
+  font-weight: $bold;
+  color: $Very-Light-Grey;
+  letter-spacing: -5px;
+  line-height: 200px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

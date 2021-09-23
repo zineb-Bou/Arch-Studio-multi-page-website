@@ -1,77 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
-
-// Varaibles
-
-// Colors
-$Very-Dark-Blue: hsl(225, 13%, 12%);
-$Dark-Grey: hsl(226, 6%, 40%);
-$Medium-Grey: hsl(223, 7%, 53%);
-$Light-Grey: hsl(225, 17%, 82%);
-$Very-Light-Grey: hsl(230, 21%, 95%);
-$Red: hsl(0, 68%, 61%);
-$white: #fff;
-
-// Typography
-
-$font-size-h1-L: 200px;
-$font-size-h1-S: 80px;
-$font-size-h2: 56px;
-$font-size-h3: 18px;
-$font-size-body: 15px;
-
-$bold: 700;
-$medium: 500;
-
-// components
-//  1* buttons
-.cta {
-  border: none;
-  height: 72px;
-  padding: 0 24px;
-  margin-top: 40px;
-  //   layouts
-  display: flex;
-  align-items: center;
-  //   fonts
-  font-weight: $bold;
-  font-size: $font-size-body;
-  line-height: 25px;
-  .icon-arrow {
-    //   btn icon
-    fill: none;
-    stroke: $white;
-    width: 26px;
-    height: 20px;
-    margin-left: 24px;
-  }
-  &.btn-normal {
-    color: $white;
-    background-color: $Very-Dark-Blue;
-  }
-}
-.tertiary {
-  border: none;
-  width: 80px;
-  height: 80px;
-  //   fonts
-  font-weight: $bold;
-  font-size: $font-size-h3;
-  line-height: 25px;
-  &.btn-normal {
-    color: $Dark-Grey;
-    background-color: $Very-Light-Grey;
-  }
-  &.btn-active {
-    color: $Light-Grey;
-    background-color: $Very-Dark-Blue;
-  }
-}
-
 // styling
-
-body {
+* {
   margin: 0;
   padding: 0;
+}
+body {
+  box-sizing: border-box;
   font-family: 'Spartan', sans-serif;
 }
 
@@ -85,7 +18,7 @@ p {
 
 .sidebar {
   position: absolute;
-  margin-left: 32px;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,8 +42,8 @@ p {
 }
 
 .container {
-  margin: 0 165px;
-  border: 1px solid red;
+  margin: 0 120px;
+  // border: 1px solid red;
   //   style the header
   .header {
     margin-top: 64px;
@@ -144,6 +77,7 @@ p {
       grid-column: 1/4;
       margin-top: 56px;
       height: 720px;
+      width: 100%;
       position: relative;
       display: flex;
       align-items: center;
@@ -159,7 +93,7 @@ p {
         width: 554px;
         margin-left: 190px;
         z-index: 10;
-        .main-heading {
+        .heading-small {
           font-size: $font-size-h1-S;
           font-weight: $bold;
           color: $white;
@@ -176,15 +110,61 @@ p {
         .btn-list {
           list-style: none;
           position: absolute;
+          display: flex;
+          flex-direction: row;
           bottom: 0;
           left: -80px;
           padding: 0;
           margin: 0;
-          & > li {
-            margin: -2px;
-            display: inline;
+        }
+      }
+    }
+  }
+  // style the main section
+  .main {
+    .welcome-section {
+      margin-top: 108px;
+      display: grid;
+      grid-template-columns: 182px 446px auto;
+      .heading--large {
+        z-index: 1;
+        grid-column: 1/4;
+        grid-row: 1/2;
+      }
+      .content {
+        width: 446px;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-top: -40px;
+        display: grid;
+        .content__title {
+          font-size: $font-size-h2;
+          font-weight: $bold;
+          color: $Very-Dark-Blue;
+          line-height: 56px;
+          letter-spacing: -2px;
+          margin-bottom: 82px;
+          &::first-letter {
+            text-transform: uppercase;
           }
         }
+        .content__txt {
+          font-size: $font-size-body;
+          font-weight: $medium;
+          color: $Medium-Grey;
+          line-height: 25px;
+          vertical-align: bottom;
+          align-self: end;
+        }
+      }
+      .welcome-image {
+        object-fit: cover;
+        z-index: -1;
+        grid-column: 3/4;
+        grid-row: 2/3;
+        margin-top: -80px;
+        justify-self: end;
+        align-self: end;
       }
     }
   }

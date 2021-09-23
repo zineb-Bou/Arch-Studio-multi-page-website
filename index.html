@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- main style  -->
-    <link rel="stylesheet" href="style/css/style.css" />
+    <link rel="stylesheet" href="src/style/style.css" />
 
     <link
       rel="icon"
@@ -35,13 +35,13 @@
 
           <!-- text  -->
           <div class="carousel-content">
-            <h1 class="main-heading">Project Paramour</h1>
+            <h1 class="heading-small">Project Paramour</h1>
             <p class="text">
               Project made for an art museum near Southwest London. Project
               Paramour is a statement of bold, modern architecture.
             </p>
 
-            <button class="cta btn-normal" aria-label="see our portfolio">
+            <button class="cta btn--normal" aria-label="see our portfolio">
               See Our Portfolio
               <svg
                 class="icon-arrow"
@@ -56,40 +56,48 @@
               </svg>
             </button>
             <ul class="btn-list">
-              <li><button class="tertiary btn-active">01</button></li>
-              <li><button class="tertiary btn-normal">02</button></li>
-              <li><button class="tertiary btn-normal">03</button></li>
-              <li><button class="tertiary btn-normal">04</button></li>
+              <li><button class="tertiary btn--active">01</button></li>
+              <li><button class="tertiary btn--normal">02</button></li>
+              <li><button class="tertiary btn--normal">03</button></li>
+              <li><button class="tertiary btn--normal">04</button></li>
             </ul>
           </div>
         </div>
       </header>
 
       <!-- main  -->
-      <!-- <main class="main">
-        <section class="welcome-sec">
-          <span>welcome</span>
+      <main class="main">
+        <section class="welcome-section">
+          <span class="heading--large">Welcome</span>
           <div class="content">
-            <h2>Welcome to Arch Studio</h2>
-
-            <p class="text">
+            <h2 class="content__title">
+              Welcome to<br />
+              Arch Studio
+            </h2>
+            <p class="content__txt">
               We have a unique network and skillset to help bring your projects
               to life. Our small team of highly skilled individuals combined
               with our large network put us in a strong position to deliver
-              exceptional results. Over the past 10 years, we have worked on all
-              kinds of projects. From stations to high-rise buildings, we create
-              spaces that inspire and delight. We work closely with our clients
-              so that we understand the intricacies of each project. This allows
-              us to work in harmony the surrounding area to create truly
-              stunning projects that will stand the test of time.
+              exceptional results.<br /><br />
+
+              Over the past 10 years, we have worked on all kinds of projects.
+              From stations to high-rise buildings, we<br class="desktop" />
+              create spaces that inspire and delight.<br /><br />
+
+              We work closely with our clients so that we understand the
+              intricacies of each project. This allows us to work in harmony the
+              surrounding area to create truly stunning projects that will stand
+              the test of time.
             </p>
           </div>
+
           <img
             src="/assets/home/desktop/image-welcome.jpg"
-            alt="welcome image"
+            alt=""
+            class="welcome-image desktop"
           />
         </section>
-      </main> -->
+      </main>
     </div>
   </body>
 </html>
