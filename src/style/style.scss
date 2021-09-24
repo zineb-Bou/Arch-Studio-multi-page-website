@@ -1,3 +1,21 @@
 @import 'varaibles';
 @import 'components';
 @import 'home';
+@import 'protfolio';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}

@@ -1,21 +1,5 @@
 // styling
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  box-sizing: border-box;
-  font-family: 'Spartan', sans-serif;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-.container {
+.container__home {
   margin: 0 120px;
   //   Border: 1px solid red;
   // Style the main section
@@ -162,13 +146,13 @@ p {
       display: flex;
       justify-content: space-between;
       margin-top: 64px;
-      margin-bottom: 200px;
       .clickable-card {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: end;
-
+        height: 560px;
+        width: 350px;
         .large-number {
           font-size: $font-size-h1-L;
           font-weight: $bold;
@@ -198,20 +182,14 @@ p {
         &:nth-child(1) {
           background: url(/assets/portfolio/desktop/image-228b.jpg) no-repeat
             center center/cover;
-          height: 560px;
-          width: 350px;
         }
         &:nth-child(2) {
           background: url(/assets/portfolio/desktop/image-del-sol.jpg) no-repeat
             center center/cover;
-          height: 560px;
-          width: 350px;
         }
         &:nth-child(3) {
           background: url(/assets/portfolio/desktop/image-edelweiss.jpg)
             no-repeat center center/cover;
-          height: 560px;
-          width: 350px;
         }
       }
     }
