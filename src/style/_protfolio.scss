@@ -170,3 +170,72 @@
     }
   }
 }
+
+@media (max-width: 320px) {
+  .container__portfolio {
+    min-width: 311px;
+    .main {
+      grid-template-columns: repeat(1, minmax(311px, 1fr));
+      justify-content: center;
+
+      .clickable-card {
+        height: 240px;
+        // width: 311px;
+        width: 100%;
+      }
+      .card-1-1 {
+        background: url(/assets/portfolio/mobile/image-trinity.jpg) no-repeat
+          center center/cover;
+      }
+      .card-1-2 {
+        background: url(/assets/portfolio/mobile/image-sxiv.jpg) no-repeat
+          center center/cover;
+      }
+      .card-1-3 {
+        background: url(/assets/portfolio/mobile/image-del-sol.jpg) no-repeat
+          center center/cover;
+      }
+
+      // seecond row
+      .card-2-1 {
+        background: url(/assets/portfolio/mobile/image-federal.jpg) no-repeat
+          center center/cover;
+      }
+      .card-2-2 {
+        background: url(/assets/portfolio/mobile/image-paramour.jpg) no-repeat
+          center center/cover;
+      }
+      .card-2-3 {
+        background: url(/assets/portfolio/mobile/image-prototype.jpg) no-repeat
+          center center/cover;
+      }
+
+      // Third row
+      .card-3-1 {
+        background: url(/assets/portfolio/mobile/image-edelweiss.jpg) no-repeat
+          center center/cover;
+      }
+      .card-3-2 {
+        background: url(/assets/portfolio/mobile/image-hypers.jpg) no-repeat
+          center center/cover;
+      }
+      .card-3-3 {
+        background: url(/assets/portfolio/mobile/image-seraph.jpg) no-repeat
+          center center/cover;
+      }
+      // fourth row
+      .card-4-1 {
+        background: url(/assets/portfolio/mobile/image-netcry.jpg) no-repeat
+          center center/cover;
+      }
+      .card-4-2 {
+        background: url(/assets/portfolio/mobile/image-eebox.jpg) no-repeat
+          center center/cover;
+      }
+      .card-4-3 {
+        background: url(/assets/portfolio/mobile/image-228b.jpg) no-repeat
+          center center/cover;
+      }
+    }
+  }
+}
