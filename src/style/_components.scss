@@ -3,7 +3,7 @@
 .cta {
   border: none;
   height: 72px;
-  padding: 0 24px;
+  padding: 0 18px;
   //   layouts
   display: flex;
   align-items: center;
@@ -95,8 +95,8 @@
 // }
 
 .nav {
-  margin-left: 94px;
-  width: 300px;
+  margin: 0 18px;
+  width: 250px;
   display: flex;
   justify-content: space-between;
   & > a {
@@ -180,6 +180,17 @@
   }
 }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 // set components width for tablet screens
 @media (max-width: 850px) {
   .footer {
