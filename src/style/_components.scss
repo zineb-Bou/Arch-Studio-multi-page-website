@@ -180,6 +180,42 @@
   }
 }
 
+// set components width for tablet screens
+@media (max-width: 850px) {
+  .footer {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .footer {
+    background-color: $Very-Light-Grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    .nav-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: transparent;
+      .nav {
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+        margin-top: 32px;
+      }
+      .logo-wraper {
+        margin-top: -80px;
+      }
+    }
+    .cta {
+      margin-top: 64px;
+      position: static;
+    }
+  }
+}
+
     }
   }
 }
