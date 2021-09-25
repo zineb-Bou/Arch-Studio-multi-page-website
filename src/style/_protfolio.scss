@@ -1,11 +1,16 @@
-.container__protfolio {
-  margin: 0 120px;
+.container__portfolio {
+  // margin: 0 120px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  // border: 1px solid green;
   .main {
-    // width: 100%;
+    width: 100%;
     margin-top: 56px;
     display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, 350px);
+    // grid-template-rows: repeat(4, 1fr);
+    // column-gap: 30px;
     row-gap: 30px;
     justify-content: space-between;
 
