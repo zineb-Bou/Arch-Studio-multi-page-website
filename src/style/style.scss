@@ -1,8 +1,3 @@
-@import 'varaibles';
-@import 'components';
-@import 'home';
-@import 'protfolio';
-
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +5,10 @@
 body {
   box-sizing: border-box;
   font-family: 'Spartan', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -19,3 +18,8 @@ p {
   margin: 0;
   padding: 0;
 }
+
+@import 'varaibles';
+@import 'components';
+@import 'home';
+@import 'protfolio';
