@@ -1,10 +1,11 @@
 // styling
 .container__home {
-  margin: 0 120px;
+  width: 85%;
   //   Border: 1px solid red;
   // Style the main section
   .main {
     // Carousel
+    width: 100%;
     .carousel {
       background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat
         top center/cover;
@@ -47,6 +48,7 @@
       }
     }
     .welcome-section {
+      width: 100%;
       margin-top: 108px;
       display: grid;
       grid-template-columns: 182px 446px auto;
@@ -124,13 +126,13 @@
       }
     }
 
-    // Protfolio section
-    .protfolio-section {
+    // portfolio section
+    .portfolio-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 200px;
-      .protfolio-section__header {
+      .portfolio-section__header {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -147,7 +149,7 @@
         width: 169px;
       }
     }
-    .protfolio-gallery {
+    .portfolio-gallery {
       width: 100%;
       display: flex;
       flex-direction: row;
