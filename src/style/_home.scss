@@ -203,3 +203,57 @@
     }
   }
 }
+@media (max-width: 850px) {
+  .container__home {
+    width: 90%;
+    border: 1px solid red;
+    .main {
+      .carousel {
+        justify-content: center;
+        // min-width: 573px;
+        .carousel-content {
+          margin-left: 0;
+          .btn-list {
+            visibility: hidden;
+          }
+        }
+      }
+      .about-us-section {
+        align-items: center;
+        min-width: 573px;
+        .about-us__content {
+          margin-left: 0;
+        }
+      }
+
+      // portfolio section
+
+      .portfolio-section {
+        min-width: 573px;
+        .portfolio-section__header {
+          width: 573px;
+        }
+        .portfolio-gallery {
+          flex-direction: column;
+          align-items: center;
+          .clickable-card {
+            height: 240px;
+            width: 573px;
+            &:nth-child(1) {
+              background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat
+                center center/cover;
+            }
+            &:nth-child(2) {
+              background: url(/assets/portfolio/tablet/image-del-sol.jpg)
+                no-repeat center center/cover;
+            }
+            &:nth-child(3) {
+              background: url(/assets/portfolio/tablet/image-edelweiss.jpg)
+                no-repeat center center/cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
