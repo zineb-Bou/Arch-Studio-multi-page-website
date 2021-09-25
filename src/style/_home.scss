@@ -18,7 +18,7 @@
       .carousel-content {
         width: 554px;
         margin-left: 190px;
-        z-index: 10;
+        z-index: 2;
         .heading-small {
           font-size: $font-size-h1-S;
           font-weight: $bold;
@@ -208,7 +208,6 @@
 @media (max-width: 850px) {
   .container__home {
     width: 90%;
-    border: 1px solid red;
     .main {
       .carousel {
         justify-content: center;

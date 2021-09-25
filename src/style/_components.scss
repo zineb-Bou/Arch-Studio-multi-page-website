@@ -145,6 +145,10 @@
     fill: $Very-Dark-Blue;
     width: 97px;
     height: 40px;
+    margin-right: 64px;
+  }
+  .nav {
+    width: 300px;
   }
 }
 // style footer
@@ -231,7 +235,6 @@
 @media (max-width: 580px) {
   .header {
     min-width: 311px;
-    border: 1px solid green;
     .open_menu_btn {
       visibility: visible;
     }
@@ -248,8 +251,8 @@
       position: absolute;
       height: 235px;
       background-color: $Very-Light-Grey;
-      z-index: 4;
-      top: 42px;
+      z-index: 3;
+      top: 95px;
       right: 0;
       & > a {
         color: $Very-Dark-Blue;

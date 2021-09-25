@@ -147,6 +147,11 @@ p {
   fill: #1b1d23;
   width: 97px;
   height: 40px;
+  margin-right: 64px;
+}
+
+.header .nav {
+  width: 300px;
 }
 
 .footer {
@@ -236,7 +241,6 @@ p {
 @media (max-width: 580px) {
   .header {
     min-width: 311px;
-    border: 1px solid green;
   }
   .header .open_menu_btn {
     visibility: visible;
@@ -253,8 +257,8 @@ p {
     position: absolute;
     height: 235px;
     background-color: #f0f0f5;
-    z-index: 4;
-    top: 42px;
+    z-index: 3;
+    top: 95px;
     right: 0;
   }
   .header .nav > a {
@@ -283,7 +287,7 @@ p {
 .container__home .main .carousel .carousel-content {
   width: 554px;
   margin-left: 190px;
-  z-index: 10;
+  z-index: 2;
 }
 
 .container__home .main .carousel .carousel-content .heading-small {
@@ -489,7 +493,6 @@ p {
 @media (max-width: 850px) {
   .container__home {
     width: 90%;
-    border: 1px solid red;
   }
   .container__home .main .carousel {
     justify-content: center;
