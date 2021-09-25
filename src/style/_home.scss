@@ -126,12 +126,15 @@
 
     // Protfolio section
     .protfolio-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 200px;
       .protfolio-section__header {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 200px;
       }
       .title {
         font-size: $font-size-h2;
@@ -147,7 +150,9 @@
     .protfolio-gallery {
       width: 100%;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
+      gap: 12px;
       margin-top: 64px;
       .clickable-card {
         position: relative;
