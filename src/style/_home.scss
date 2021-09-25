@@ -103,21 +103,24 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      .title {
-        font-size: $font-size-h2;
-        font-weight: $bold;
-        letter-spacing: -2px;
-        line-height: 56px;
+      .about-us__content {
+        z-index: 1;
+        margin-left: 190px;
+        display: flex;
+        flex-direction: column;
         width: 445px;
-        margin-left: 190px;
-        color: $white;
-        z-index: 1;
-      }
-      .cta {
-        z-index: 1;
-        margin-left: 190px;
-        width: 187px;
-        margin-top: 32px;
+        .title {
+          font-size: $font-size-h2;
+          font-weight: $bold;
+          letter-spacing: -2px;
+          line-height: 56px;
+          color: $white;
+          width: 445px;
+        }
+        .cta {
+          width: 187px;
+          margin-top: 32px;
+        }
       }
     }
 
