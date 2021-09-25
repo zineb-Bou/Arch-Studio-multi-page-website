@@ -111,6 +111,36 @@
   margin-top: 64px;
   display: flex;
   align-items: center;
+  width: 100%;
+  position: relative;
+  .open_menu_btn {
+    border: none;
+    background-color: transparent;
+    visibility: hidden;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    #hamburger-icon {
+      width: 24px;
+      height: 17px;
+      fill: $Very-Dark-Blue;
+    }
+  }
+  .close_menu_btn {
+    border: none;
+    background-color: transparent;
+    visibility: hidden;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    #close-icon {
+      width: 20px;
+      height: 21px;
+      fill: $Very-Dark-Blue;
+    }
+  }
   .logo {
     fill: $Very-Dark-Blue;
     width: 97px;
