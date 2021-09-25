@@ -150,27 +150,36 @@
 // style footer
 .footer {
   width: 85%;
-  height: 200px;
+  height: 150px;
   margin-top: 200px;
-  background-color: $Very-Light-Grey;
-  display: flex;
-  align-items: center;
   position: relative;
+  .nav-wrapper {
+    background-color: $Very-Light-Grey;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    .logo-wraper {
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+      background-color: $Very-Dark-Blue;
+      display: grid;
+      place-items: center;
+      .logo {
+        fill: $white;
+        width: 97px;
+        height: 40px;
+      }
+    }
+  }
   .cta {
     position: absolute;
-    right: -18%;
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);
   }
-  .logo-wraper {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    background-color: $Very-Dark-Blue;
-    display: grid;
-    place-items: center;
-    .logo {
-      fill: $white;
-      width: 97px;
-      height: 40px;
+}
+
     }
   }
 }
