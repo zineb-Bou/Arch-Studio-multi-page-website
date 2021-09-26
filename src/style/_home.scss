@@ -126,43 +126,34 @@
       }
     }
 
-    // portfolio section
+    // Portfolio section
     .portfolio-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
       margin-top: 200px;
-      .portfolio-section__header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+      grid-gap: 30px;
       .title {
         font-size: $font-size-h2;
         font-weight: $bold;
         letter-spacing: -2px;
         line-height: 56px;
         color: $Very-Dark-Blue;
+        grid-column: 1/2;
+        grid-row: 1/2;
       }
-      .cta {
-        width: 169px;
+      .btn-wrapper {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        justify-self: end;
       }
-    }
-    .portfolio-gallery {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 64px;
       .clickable-card {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: end;
         height: 560px;
-        width: 350px;
+        // width: 350px;
         .large-number {
           font-size: $font-size-h1-L;
           font-weight: $bold;
@@ -189,17 +180,23 @@
           z-index: 1;
           opacity: 0.8;
         }
-        &:nth-child(1) {
+        &.card-1 {
           background: url(/assets/portfolio/desktop/image-228b.jpg) no-repeat
             center center/cover;
+          grid-column: 1/2;
+          grid-row: 2/3;
         }
-        &:nth-child(2) {
+        &.card-2 {
           background: url(/assets/portfolio/desktop/image-del-sol.jpg) no-repeat
             center center/cover;
+          grid-column: 2/3;
+          grid-row: 2/3;
         }
-        &:nth-child(3) {
+        &.card-3 {
           background: url(/assets/portfolio/desktop/image-edelweiss.jpg)
             no-repeat center center/cover;
+          grid-column: 3/4;
+          grid-row: 2/3;
         }
       }
     }
