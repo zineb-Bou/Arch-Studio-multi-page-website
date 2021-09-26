@@ -1,12 +1,16 @@
-@import 'varaibles'; // components
+@import 'varaibles';
+
+// components
 //  1* buttons
 .cta {
+  box-sizing: border-box;
   border: none;
   height: 72px;
   padding: 0 18px;
   //   layouts
   display: flex;
   align-items: center;
+  justify-content: space-between;
   //   fonts
   font-family: 'Spartan', sans-serif;
   font-weight: $bold;
@@ -199,6 +203,11 @@
 @media (max-width: 850px) {
   .footer {
     width: 100%;
+  }
+  .heading--large {
+    font-size: 18vw;
+    letter-spacing: -3px;
+    margin: 0;
   }
 }
 @media (max-width: 650px) {
