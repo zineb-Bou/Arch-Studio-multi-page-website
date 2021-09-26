@@ -23,11 +23,13 @@ p {
 }
 
 .cta {
+  box-sizing: border-box;
   border: none;
   height: 72px;
   padding: 0 18px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-family: 'Spartan', sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -69,7 +71,7 @@ p {
 
 .heading--large {
   display: inline-block;
-  font-size: 12rem;
+  font-size: 200px;
   font-weight: 700;
   color: #f0f0f5;
   letter-spacing: -5px;
@@ -206,6 +208,11 @@ p {
   .footer {
     width: 100%;
   }
+  .heading--large {
+    font-size: 18vw;
+    letter-spacing: -3px;
+    margin: 0;
+  }
 }
 
 @media (max-width: 650px) {
@@ -271,12 +278,14 @@ p {
 }
 
 .container__home .main {
+  margin-top: 56px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container__home .main .carousel {
   background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat top center/cover;
-  margin-top: 56px;
   height: 720px;
   width: 100%;
   position: relative;
@@ -286,8 +295,8 @@ p {
 
 .container__home .main .carousel .carousel-content {
   width: 554px;
-  margin-left: 190px;
-  z-index: 2;
+  margin-left: 100px;
+  z-index: 1;
 }
 
 .container__home .main .carousel .carousel-content .heading-small {
@@ -385,7 +394,7 @@ p {
 
 .container__home .main .about-us-section .about-us__content {
   z-index: 1;
-  margin-left: 190px;
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
   width: 445px;
@@ -401,22 +410,15 @@ p {
 }
 
 .container__home .main .about-us-section .about-us__content .cta {
-  width: 187px;
   margin-top: 32px;
 }
 
 .container__home .main .portfolio-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 200px;
-}
-
-.container__home .main .portfolio-section .portfolio-section__header {
+  display: grid;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 200px;
+  grid-gap: 30px;
 }
 
 .container__home .main .portfolio-section .title {
@@ -425,32 +427,26 @@ p {
   letter-spacing: -2px;
   line-height: 56px;
   color: #1b1d23;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
-.container__home .main .portfolio-section .cta {
-  width: 169px;
+.container__home .main .portfolio-section .btn-wrapper {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  justify-self: end;
 }
 
-.container__home .main .portfolio-gallery {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 64px;
-}
-
-.container__home .main .portfolio-gallery .clickable-card {
+.container__home .main .portfolio-section .clickable-card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
   height: 560px;
-  width: 350px;
 }
 
-.container__home .main .portfolio-gallery .clickable-card .large-number {
-  font-size: 12rem;
+.container__home .main .portfolio-section .clickable-card .large-number {
+  font-size: 200px;
   font-weight: 700;
   position: absolute;
   right: 0;
@@ -459,7 +455,7 @@ p {
   opacity: 0.7;
 }
 
-.container__home .main .portfolio-gallery .clickable-card .project-name {
+.container__home .main .portfolio-section .clickable-card .project-name {
   display: block;
   margin-left: 40px;
   margin-bottom: 4px;
@@ -469,7 +465,7 @@ p {
   z-index: 1;
 }
 
-.container__home .main .portfolio-gallery .clickable-card .view-all-tag {
+.container__home .main .portfolio-section .clickable-card .view-all-tag {
   display: block;
   margin-left: 40px;
   margin-bottom: 40px;
@@ -478,60 +474,154 @@ p {
   opacity: 0.8;
 }
 
-.container__home .main .portfolio-gallery .clickable-card:nth-child(1) {
+.container__home .main .portfolio-section .clickable-card.card-1 {
   background: url(/assets/portfolio/desktop/image-228b.jpg) no-repeat center center/cover;
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 
-.container__home .main .portfolio-gallery .clickable-card:nth-child(2) {
+.container__home .main .portfolio-section .clickable-card.card-2 {
   background: url(/assets/portfolio/desktop/image-del-sol.jpg) no-repeat center center/cover;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
-.container__home .main .portfolio-gallery .clickable-card:nth-child(3) {
+.container__home .main .portfolio-section .clickable-card.card-3 {
   background: url(/assets/portfolio/desktop/image-edelweiss.jpg) no-repeat center center/cover;
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
+  .container__home {
+    width: 80%;
+  }
+  .container__home .main .portfolio-section {
+    width: 100%;
+    column-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container__home .main .portfolio-section .btn-wrapper {
+    grid-column: 2/3;
+  }
+  .container__home .main .portfolio-section .clickable-card {
+    height: 240px;
+    width: 100%;
+  }
+  .container__home .main .portfolio-section .clickable-card.card-1 {
+    background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .container__home .main .portfolio-section .clickable-card.card-2 {
+    background: url(/assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .container__home .main .portfolio-section .clickable-card.card-3 {
+    background: url(/assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+}
+
+@media (max-width: 700px) {
   .container__home {
     width: 90%;
   }
   .container__home .main .carousel {
     justify-content: center;
+    background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat top center/cover;
   }
   .container__home .main .carousel .carousel-content {
-    margin-left: 0;
+    margin-left: 12px;
   }
   .container__home .main .carousel .carousel-content .btn-list {
     visibility: hidden;
   }
+  .container__home .main .welcome-section {
+    grid-template-columns: 1fr;
+  }
+  .container__home .main .welcome-section .welcome-image {
+    display: none;
+  }
+  .container__home .main .welcome-section .heading--large {
+    grid-column: 1/2;
+  }
+  .container__home .main .welcome-section .content {
+    margin: 0;
+    grid-column: 1/2;
+    align-items: start;
+    width: auto;
+    max-width: 446px;
+  }
+  .container__home .main .welcome-section .content .content__title {
+    margin-bottom: 32px;
+  }
   .container__home .main .about-us-section {
-    align-items: center;
-    min-width: 573px;
+    background: url(/assets/home/tablet/image-small-team.jpg) no-repeat center center/cover;
   }
   .container__home .main .about-us-section .about-us__content {
     margin-left: 0;
+    margin-left: 12px;
   }
-  .container__home .main .portfolio-section {
-    min-width: 573px;
-  }
-  .container__home .main .portfolio-section .portfolio-section__header {
-    width: 573px;
-  }
-  .container__home .main .portfolio-section .portfolio-gallery {
-    flex-direction: column;
+}
+
+@media (max-width: 450px) {
+  .container__home {
+    width: 100%;
     align-items: center;
   }
-  .container__home .main .portfolio-section .portfolio-gallery .clickable-card {
+  .container__home .main .carousel {
+    background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat top center/cover;
+  }
+  .container__home .main .welcome-section .heading--large {
+    display: none;
+  }
+  .container__home .main .welcome-section .content {
+    margin-left: 50px;
+  }
+  .container__home .main .about-us-section {
+    background: url(/assets/home/mobile/image-small-team.jpg) no-repeat center center/cover;
+  }
+  .container__home .main .about-us-section .about-us__content {
+    margin-left: 0;
+    margin-left: 12px;
+  }
+  .container__home .main .portfolio-section {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    align-self: center;
+  }
+  .container__home .main .portfolio-section .btn-wrapper {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    width: 100%;
+  }
+  .container__home .main .portfolio-section .btn-wrapper .cta {
+    width: 100%;
+  }
+  .container__home .main .portfolio-section .text {
+    grid-column: 1/2;
+  }
+  .container__home .main .portfolio-section .clickable-card {
     height: 240px;
-    width: 573px;
+    width: 100%;
   }
-  .container__home .main .portfolio-section .portfolio-gallery .clickable-card:nth-child(1) {
-    background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
+  .container__home .main .portfolio-section .clickable-card .large-number {
+    visibility: hidden;
   }
-  .container__home .main .portfolio-section .portfolio-gallery .clickable-card:nth-child(2) {
-    background: url(/assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
+  .container__home .main .portfolio-section .clickable-card.card-1 {
+    background: url(/assets/portfolio/mobile/image-228b.jpg) no-repeat center center/cover;
+    grid-column: 1/2;
   }
-  .container__home .main .portfolio-section .portfolio-gallery .clickable-card:nth-child(3) {
-    background: url(/assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
+  .container__home .main .portfolio-section .clickable-card.card-2 {
+    background: url(/assets/portfolio/mobile/image-del-sol.jpg) no-repeat center center/cover;
+    grid-column: 1/2;
+  }
+  .container__home .main .portfolio-section .clickable-card.card-3 {
+    background: url(/assets/portfolio/mobile/image-edelweiss.jpg) no-repeat center center/cover;
+    grid-column: 1/2;
   }
 }
 
@@ -608,7 +698,7 @@ p {
 }
 
 .container__portfolio .main .clickable-card .large-number {
-  font-size: 12rem;
+  font-size: 200px;
   font-weight: 700;
   position: absolute;
   right: 0;
@@ -639,7 +729,7 @@ p {
 @media (max-width: 850px) {
   .container__portfolio {
     align-items: center;
-    width: 90%;
+    width: 80%;
   }
   .container__portfolio .main {
     grid-template-columns: repeat(1, 1fr);

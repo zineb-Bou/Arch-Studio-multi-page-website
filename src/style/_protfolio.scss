@@ -107,17 +107,14 @@
 
 @media (max-width: 850px) {
   .container__portfolio {
-    // justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 80%;
     .main {
       grid-template-columns: repeat(1, 1fr);
       justify-content: center;
-      // width: 90%;
       .clickable-card {
         height: 240px;
         width: 100%;
-        // width: 573px;
       }
       .card-1-1 {
         background: url(/assets/portfolio/tablet/image-trinity.jpg) no-repeat
@@ -185,7 +182,6 @@
 
       .clickable-card {
         height: 240px;
-        // width: 311px;
         width: 100%;
       }
       .card-1-1 {

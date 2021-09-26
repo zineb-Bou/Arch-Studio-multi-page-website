@@ -1,15 +1,16 @@
 // styling
 .container__home {
   width: 85%;
-  //   Border: 1px solid red;
-  // Style the main section
   .main {
     // Carousel
+    margin-top: 56px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+
     .carousel {
       background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat
         top center/cover;
-      margin-top: 56px;
       height: 720px;
       width: 100%;
       position: relative;
@@ -17,8 +18,8 @@
       align-items: center;
       .carousel-content {
         width: 554px;
-        margin-left: 190px;
-        z-index: 2;
+        margin-left: 100px;
+        z-index: 1;
         .heading-small {
           font-size: $font-size-h1-S;
           font-weight: $bold;
@@ -94,7 +95,7 @@
       }
     }
 
-    // about us section
+    // About us section
     .about-us-section {
       background: url(/assets/home/desktop/image-small-team.jpg) no-repeat
         center center/cover;
@@ -107,7 +108,7 @@
       justify-content: center;
       .about-us__content {
         z-index: 1;
-        margin-left: 190px;
+        margin-left: 100px;
         display: flex;
         flex-direction: column;
         width: 445px;
@@ -120,7 +121,6 @@
           width: 445px;
         }
         .cta {
-          width: 187px;
           margin-top: 32px;
         }
       }
@@ -202,6 +202,7 @@
     }
   }
 }
+
 // set width for tablet screens
 @media (max-width: 900px) {
   .container__home {
@@ -242,52 +243,119 @@
   }
 }
 
+@media (max-width: 700px) {
   .container__home {
     width: 90%;
     .main {
       .carousel {
         justify-content: center;
-        // min-width: 573px;
+        background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat
+          top center/cover;
         .carousel-content {
-          margin-left: 0;
+          margin-left: 12px;
           .btn-list {
             visibility: hidden;
           }
         }
       }
+      // welcome section
+      .welcome-section {
+        grid-template-columns: 1fr;
+        .welcome-image {
+          display: none;
+        }
+        .heading--large {
+          grid-column: 1/2;
+        }
+        .content {
+          margin: 0;
+          grid-column: 1/2;
+          align-items: start;
+          width: auto;
+          max-width: 446px;
+          .content__title {
+            margin-bottom: 32px;
+          }
+        }
+      }
       .about-us-section {
-        align-items: center;
-        min-width: 573px;
+        background: url(/assets/home/tablet/image-small-team.jpg) no-repeat
+          center center/cover;
         .about-us__content {
           margin-left: 0;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+// set width for mobile screen
+
+@media (max-width: 450px) {
+  .container__home {
+    width: 100%;
+    align-items: center;
+    .main {
+      .carousel {
+        background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat
+          top center/cover;
+      }
+      // welcome section
+      .welcome-section {
+        .heading--large {
+          display: none;
+        }
+        .content {
+          margin-left: 50px;
+        }
+      }
+      .about-us-section {
+        background: url(/assets/home/mobile/image-small-team.jpg) no-repeat
+          center center/cover;
+        .about-us__content {
+          margin-left: 0;
+          margin-left: 12px;
         }
       }
 
       // portfolio section
 
       .portfolio-section {
-        min-width: 573px;
-        .portfolio-section__header {
-          width: 573px;
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        align-self: center;
+        .btn-wrapper {
+          grid-column: 1/2;
+          grid-row: 5/6;
+          width: 100%;
+          .cta {
+            width: 100%;
+          }
         }
-        .portfolio-gallery {
-          flex-direction: column;
-          align-items: center;
-          .clickable-card {
-            height: 240px;
-            width: 573px;
-            &:nth-child(1) {
-              background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat
-                center center/cover;
-            }
-            &:nth-child(2) {
-              background: url(/assets/portfolio/tablet/image-del-sol.jpg)
-                no-repeat center center/cover;
-            }
-            &:nth-child(3) {
-              background: url(/assets/portfolio/tablet/image-edelweiss.jpg)
-                no-repeat center center/cover;
-            }
+        .text {
+          grid-column: 1/2;
+        }
+        .clickable-card {
+          height: 240px;
+          width: 100%;
+          .large-number {
+            visibility: hidden;
+          }
+          &.card-1 {
+            background: url(/assets/portfolio/mobile/image-228b.jpg) no-repeat
+              center center/cover;
+            grid-column: 1/2;
+          }
+          &.card-2 {
+            background: url(/assets/portfolio/mobile/image-del-sol.jpg)
+              no-repeat center center/cover;
+            grid-column: 1/2;
+          }
+          &.card-3 {
+            background: url(/assets/portfolio/mobile/image-edelweiss.jpg)
+              no-repeat center center/cover;
+            grid-column: 1/2;
           }
         }
       }
