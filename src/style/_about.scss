@@ -62,3 +62,45 @@
       }
     }
 
+    // style the Heritage section
+    .heritage-section {
+      margin-top: 200px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      .content {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .title {
+          max-width: 445px;
+          margin-bottom: 32px;
+          font-size: $font-size-h2;
+          font-weight: $bold;
+          color: $Very-Dark-Blue;
+          line-height: 56px;
+          letter-spacing: -2px;
+          &::first-letter {
+            text-transform: uppercase;
+          }
+        }
+        .text {
+          max-width: 445px;
+          font-size: $font-size-body;
+          font-weight: $medium;
+          color: $Medium-Grey;
+          line-height: 25px;
+        }
+      }
+      .heritage-image {
+        position: relative;
+        width: 50%;
+        // min-width: 540px;
+        height: 568px;
+        background: url(/assets/about/desktop/image-heritage.jpg) no-repeat
+          center center/cover;
+      }
+    }
+
