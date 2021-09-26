@@ -202,7 +202,46 @@
     }
   }
 }
-@media (max-width: 850px) {
+// set width for tablet screens
+@media (max-width: 900px) {
+  .container__home {
+    width: 80%;
+    .main {
+      // portfolio section
+      .portfolio-section {
+        width: 100%;
+        column-gap: 0;
+        grid-template-columns: repeat(2, 1fr);
+        .btn-wrapper {
+          grid-column: 2/3;
+        }
+        .clickable-card {
+          height: 240px;
+          width: 100%;
+          &.card-1 {
+            background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat
+              center center/cover;
+            grid-column: 1/3;
+            grid-row: 2/3;
+          }
+          &.card-2 {
+            background: url(/assets/portfolio/tablet/image-del-sol.jpg)
+              no-repeat center center/cover;
+            grid-column: 1/3;
+            grid-row: 3/4;
+          }
+          &.card-3 {
+            background: url(/assets/portfolio/tablet/image-edelweiss.jpg)
+              no-repeat center center/cover;
+            grid-column: 1/3;
+            grid-row: 4/5;
+          }
+        }
+      }
+    }
+  }
+}
+
   .container__home {
     width: 90%;
     .main {
