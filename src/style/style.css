@@ -256,6 +256,7 @@ p {
     visibility: visible;
   }
   .header .nav {
+    visibility: hidden;
     margin: 0;
     width: 80%;
     padding-left: 48px;
@@ -526,9 +527,6 @@ p {
 }
 
 @media (max-width: 700px) {
-  .container__home {
-    width: 90%;
-  }
   .container__home .main .carousel {
     justify-content: center;
     background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat top center/cover;
@@ -567,9 +565,11 @@ p {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .container__home {
     width: 100%;
+  }
+  .container__home .main {
     align-items: center;
   }
   .container__home .main .carousel {
@@ -829,12 +829,12 @@ p {
 
 .container__about {
   width: 85%;
-  border: 1px solid red;
 }
 
 .container__about .main {
-  border: 1px solid green;
   margin-top: 56px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container__about .main .hero-section {
@@ -904,6 +904,17 @@ p {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+}
+
+.container__about .main .heritage-section::before {
+  content: ' ';
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c9cdd9;
 }
 
 .container__about .main .heritage-section .content {
@@ -921,6 +932,7 @@ p {
   color: #1b1d23;
   line-height: 56px;
   letter-spacing: -2px;
+  margin-top: 12px;
 }
 
 .container__about .main .heritage-section .content .title::first-letter {
@@ -945,7 +957,6 @@ p {
 .container__about .main .leaders-section {
   margin-top: 200px;
   width: 100%;
-  border: 1px solid #a7760d;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
@@ -961,8 +972,48 @@ p {
   grid-row: 1/2;
 }
 
-.container__about .main .leaders-section .leader-card {
-  border: 1px solid red;
+.container__about .main .leaders-section .leader-card .social-media-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100px;
+  visibility: hidden;
+}
+
+.container__about .main .leaders-section .leader-card .social-media-links .twitter-icon {
+  width: 40px;
+  height: 33px;
+  fill: #1b1d23;
+  display: inline-block;
+}
+
+.container__about .main .leaders-section .leader-card .social-media-links .linkedin-icon {
+  width: 40px;
+  height: 40px;
+  fill: #1b1d23;
+  display: inline-block;
+}
+
+.container__about .main .leaders-section .leader-card .name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b1d23;
+  line-height: 25px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.container__about .main .leaders-section .leader-card .occupation {
+  font-size: 15px;
+  color: #7f8490;
+  line-height: 25px;
+  margin-bottom: 8px;
+}
+
+.container__about .main .leaders-section .leader-card .avatar {
+  width: 100%;
+  max-width: 350px;
 }
 
 .container__about .main .leaders-section .leader-card.card-1 {
@@ -985,21 +1036,125 @@ p {
   grid-row: 2/3;
 }
 
-.container__about .main .leaders-section .leader-card .name {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1b1d23;
-  line-height: 25px;
-  margin-bottom: 2px;
+@media (max-width: 900px) {
+  .container__about {
+    width: 80%;
+  }
+  .container__about .main .hero-section .hero-image {
+    width: 90%;
+    background: url(/assets/about/tablet/image-hero.jpg) no-repeat center center/cover;
+  }
+  .container__about .main .hero-section .content {
+    right: 0px;
+    width: 85%;
+    max-height: 338px;
+  }
+  .container__about .main .hero-section .content .title {
+    margin-left: 32px;
+    font-size: 40px;
+  }
+  .container__about .main .hero-section .content .text {
+    margin-left: 32px;
+  }
+  .container__about .main .heritage-section .heritage-image {
+    display: none;
+  }
+  .container__about .main .heritage-section .content {
+    width: 100%;
+  }
+  .container__about .main .heritage-section .content .title {
+    margin-top: 64px;
+  }
+  .container__about .main .leaders-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 48px;
+  }
+  .container__about .main .leaders-section .title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .container__about .main .leaders-section .leader-card .social-media-links {
+    visibility: visible;
+  }
+  .container__about .main .leaders-section .leader-card.card-1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .container__about .main .leaders-section .leader-card.card-2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .container__about .main .leaders-section .leader-card.card-3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .container__about .main .leaders-section .leader-card.card-4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
 }
 
-.container__about .main .leaders-section .leader-card .occupation {
-  font-size: 15px;
-  color: #7f8490;
-  line-height: 25px;
+@media (max-width: 650px) {
+  .container__about {
+    width: 100%;
+  }
+  .container__about .main {
+    align-items: center;
+  }
+  .container__about .main .hero-section .heading--large {
+    display: none;
+  }
+  .container__about .main .hero-section .hero-image {
+    width: 100%;
+    max-height: 400px;
+  }
+  .container__about .main .hero-section .content {
+    left: 0px;
+    top: 350px;
+    width: 90%;
+  }
+  .container__about .main .heritage-section {
+    width: 85%;
+    margin-top: 400px;
+  }
+  .container__about .main .heritage-section .heritage-image {
+    display: none;
+  }
+  .container__about .main .heritage-section .content {
+    width: 100%;
+  }
+  .container__about .main .heritage-section .content .title {
+    margin-top: 64px;
+  }
 }
 
-.container__about .main .leaders-section .leader-card .avatar {
-  width: 100%;
-  max-width: 350px;
+@media (max-width: 600px) {
+  .container__about .main .leaders-section {
+    grid-template-columns: 1fr;
+    grid-gap: 48px;
+  }
+  .container__about .main .leaders-section .title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: center;
+  }
+  .container__about .main .leaders-section .leader-card {
+    justify-self: center;
+  }
+  .container__about .main .leaders-section .leader-card.card-1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .container__about .main .leaders-section .leader-card.card-2 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .container__about .main .leaders-section .leader-card.card-3 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .container__about .main .leaders-section .leader-card.card-4 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
 }

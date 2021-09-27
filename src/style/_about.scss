@@ -2,10 +2,12 @@
 
 .container__about {
   width: 85%;
-  border: 1px solid red;
+  // border: 1px solid red;
   .main {
-    border: 1px solid green;
+    // border: 1px solid green;
     margin-top: 56px;
+    display: flex;
+    flex-direction: column;
 
     // style the hero section
     .hero-section {
@@ -86,6 +88,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
         .title {
           max-width: 445px;
           margin-bottom: 32px;
@@ -94,6 +97,7 @@
           color: $Very-Dark-Blue;
           line-height: 56px;
           letter-spacing: -2px;
+          margin-top: 12px;
           &::first-letter {
             text-transform: uppercase;
           }
@@ -120,7 +124,6 @@
     .leaders-section {
       margin-top: 200px;
       width: 100%;
-      border: 1px solid rgb(167, 118, 13);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 15px;
