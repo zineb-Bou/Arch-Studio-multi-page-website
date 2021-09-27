@@ -258,22 +258,30 @@
     }
   }
 }
+// Set width for mobile screens
+@media (max-width: 650px) {
+  .container__contact {
+    width: 80%;
+    .main {
+      align-items: center;
+      .hero-section {
+        .heading--large {
+          display: none;
+        }
+        .hero-image {
+          width: 100%;
+          max-height: 400px;
+        }
+        .content {
+          left: 0px;
+          top: 350px;
+          width: 90%;
+        }
+      }
+      .contact__details {
+        margin-top: 400px;
+      }
+    }
+  }
+}
 
-// // set width for mobile screen
-// @media (max-width: 400px) {
-//   .container__contact {
-//     width: 100%;
-//     .main {
-//       .hero-section {
-//         .hero-image {
-//           background: url(/assets/contact/mobile/image-hero.jpg) no-repeat
-//             center center / cover;
-//           max-height: 240px;
-//         }
-//         .content {
-//           top: 200px;
-//         }
-//       }
-//     }
-//   }
-// }
