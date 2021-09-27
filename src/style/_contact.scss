@@ -1,12 +1,10 @@
 // style layout
-
 .container__contact {
   width: 85%;
   // border: 1px solid red;
   .main {
     // border: 1px solid green;
     margin-top: 56px;
-
     // style the hero section
     .hero-section {
       width: 100%;
@@ -19,6 +17,7 @@
         top: 117px;
         right: 0;
         z-index: 2;
+        // border:1px solid red;
       }
       .hero-image {
         background: url(/assets/contact/desktop/image-hero.jpg) no-repeat center
@@ -90,9 +89,11 @@
         line-height: 56px;
         letter-spacing: -2px;
         grid-column: 1/2;
-        max-width: 220px;
+        width: 220px;
       }
       .contact {
+        display: flex;
+        flex-direction: column;
         .title {
           font-size: $font-size-body;
           font-weight: $bold;
@@ -134,7 +135,6 @@
       margin-top: 250px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      border: 1px solid red;
       .form {
         display: flex;
         flex-direction: column;
@@ -180,7 +180,7 @@
         }
       }
       .title {
-        max-width: 250px;
+        width: 250px;
         align-self: center;
         font-size: $font-size-h2;
         font-weight: $bold;
