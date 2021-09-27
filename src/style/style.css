@@ -248,6 +248,7 @@ p {
 @media (max-width: 580px) {
   .header {
     min-width: 311px;
+    width: 90%;
   }
   .header .open_menu_btn {
     visibility: visible;
@@ -276,6 +277,9 @@ p {
 
 .container__home {
   width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container__home .main {
@@ -628,6 +632,7 @@ p {
 .container__portfolio {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 85%;
 }
 
@@ -829,6 +834,9 @@ p {
 
 .container__about {
   width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container__about .main {
@@ -1096,7 +1104,7 @@ p {
 
 @media (max-width: 650px) {
   .container__about {
-    width: 100%;
+    width: 80%;
   }
   .container__about .main {
     align-items: center;
@@ -1114,14 +1122,10 @@ p {
     width: 90%;
   }
   .container__about .main .heritage-section {
-    width: 85%;
     margin-top: 400px;
   }
   .container__about .main .heritage-section .heritage-image {
     display: none;
-  }
-  .container__about .main .heritage-section .content {
-    width: 100%;
   }
   .container__about .main .heritage-section .content .title {
     margin-top: 64px;
@@ -1157,4 +1161,237 @@ p {
     grid-column: 1/2;
     grid-row: 5/6;
   }
+}
+
+@media (max-width: 400px) {
+  .container__about {
+    width: 100%;
+  }
+  .container__about .main .hero-section .hero-image {
+    background: url(/assets/about/mobile/image-hero.jpg) no-repeat center center/cover;
+    max-height: 240px;
+  }
+  .container__about .main .hero-section .content {
+    top: 200px;
+  }
+  .container__about .main .heritage-section::before {
+    margin-left: 32px;
+  }
+  .container__about .main .heritage-section .content .title {
+    margin-left: 32px;
+  }
+  .container__about .main .heritage-section .content .text {
+    margin-left: 32px;
+  }
+}
+
+.container__contact {
+  width: 85%;
+}
+
+.container__contact .main {
+  margin-top: 56px;
+}
+
+.container__contact .main .hero-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.container__contact .main .hero-section .heading--large {
+  position: absolute;
+  top: 117px;
+  right: 0;
+  z-index: 2;
+}
+
+.container__contact .main .hero-section .hero-image {
+  background: url(/assets/contact/desktop/image-hero.jpg) no-repeat center center/cover;
+  width: 70%;
+  height: 720px;
+  position: relative;
+  z-index: -1;
+}
+
+.container__contact .main .hero-section .content {
+  height: 503px;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  right: -100px;
+  bottom: 0;
+  width: 67%;
+}
+
+.container__contact .main .hero-section .content .title {
+  margin-bottom: 30px;
+  max-width: 446px;
+  align-self: center;
+  font-size: 56px;
+  font-weight: 700;
+  color: #1b1d23;
+  line-height: 56px;
+  letter-spacing: -2px;
+}
+
+.container__contact .main .hero-section .content .title::first-letter {
+  text-transform: uppercase;
+}
+
+.container__contact .main .hero-section .content .text {
+  margin-bottom: 16px;
+  max-width: 446px;
+  align-self: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #7f8490;
+  line-height: 25px;
+}
+
+.container__contact .main .contact__details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 100px;
+  margin-top: 200px;
+  position: relative;
+  padding-top: 80px;
+}
+
+.container__contact .main .contact__details::before {
+  content: ' ';
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c9cdd9;
+}
+
+.container__contact .main .contact__details .title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #1b1d23;
+  line-height: 56px;
+  letter-spacing: -2px;
+  grid-column: 1/2;
+  max-width: 220px;
+}
+
+.container__contact .main .contact__details .contact .title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #60636c;
+  line-height: 35px;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+.container__contact .main .contact__details .contact .text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 35px;
+  color: #7f8490;
+}
+
+.container__contact .main .contact__details .contact .cta {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 32px;
+}
+
+.container__contact .main .contact__details .contact .cta .icon-arrow {
+  stroke: #1b1d23;
+}
+
+.container__contact .main .contact__details .contact .first-contact {
+  grid-column: 2/3;
+}
+
+.container__contact .main .contact__details .contact .second-contact {
+  grid-column: 3/4;
+}
+
+.container__contact .main .contact__details #map {
+  width: 100%;
+  height: 560px;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  background-color: red;
+}
+
+.container__contact .main .form-section {
+  margin-top: 250px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid red;
+}
+
+.container__contact .main .form-section .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container__contact .main .form-section .form input {
+  height: 47px;
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 1px solid #7f8490;
+  padding-left: 24px;
+  font-family: 'Spartan', sans-serif;
+}
+
+.container__contact .main .form-section .form input::placeholder {
+  font-size: 15px;
+  font-weight: 700;
+  color: #7f8490;
+}
+
+.container__contact .main .form-section .form textarea {
+  border: none;
+  border-bottom: 1px solid #7f8490;
+  padding-left: 24px;
+  padding-top: 18px;
+  font-family: 'Spartan', sans-serif;
+  resize: none;
+}
+
+.container__contact .main .form-section .form textarea::placeholder {
+  font-size: 15px;
+  font-weight: 700;
+  color: #7f8490;
+}
+
+.container__contact .main .form-section .form .submit-btn {
+  height: 80px;
+  width: 80px;
+  background-color: #1b1d23;
+  border: none;
+  align-self: end;
+}
+
+.container__contact .main .form-section .form .submit-btn .icon-arrow {
+  width: 26px;
+  height: 20px;
+  stroke: #fff;
+}
+
+.container__contact .main .form-section .title {
+  max-width: 250px;
+  align-self: center;
+  font-size: 56px;
+  font-weight: 700;
+  color: #1b1d23;
+  line-height: 56px;
+  letter-spacing: -2px;
+}
+
+.container__contact .main .form-section .title::first-letter {
+  text-transform: uppercase;
 }
