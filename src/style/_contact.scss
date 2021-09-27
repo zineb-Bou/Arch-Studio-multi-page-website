@@ -130,6 +130,140 @@
         background-color: red;
       }
     }
+    .form-section {
+      margin-top: 250px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid red;
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        input {
+          height: 47px;
+          margin-bottom: 40px;
+          border: none;
+          border-bottom: 1px solid $Medium-Grey;
+          padding-left: 24px;
+          font-family: 'Spartan', sans-serif;
+          &::placeholder {
+            font-size: $font-size-body;
+            font-weight: $bold;
+            color: $Medium-Grey;
+          }
+        }
+        textarea {
+          border: none;
+          border-bottom: 1px solid $Medium-Grey;
+          padding-left: 24px;
+          padding-top: 18px;
+          font-family: 'Spartan', sans-serif;
+          resize: none;
+
+          &::placeholder {
+            font-size: $font-size-body;
+            font-weight: $bold;
+            color: $Medium-Grey;
+          }
+        }
+        .submit-btn {
+          height: 80px;
+          width: 80px;
+          background-color: $Very-Dark-Blue;
+          border: none;
+          align-self: end;
+          .icon-arrow {
+            width: 26px;
+            height: 20px;
+            stroke: $white;
+          }
+        }
+      }
+      .title {
+        max-width: 250px;
+        align-self: center;
+        font-size: $font-size-h2;
+        font-weight: $bold;
+        color: $Very-Dark-Blue;
+        line-height: 56px;
+        letter-spacing: -2px;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 }
 
+// // Set width for tablet screens and
+
+// // Set width for tablet screens
+// @media (max-width: 900px) {
+//   .container__contact {
+//     width: 80%;
+//     .main {
+//       .hero-section {
+//         .hero-image {
+//           width: 90%;
+//           background: url(/assets/contact/tablet/image-hero.jpg) no-repeat
+//             center center / cover;
+//         }
+//         .content {
+//           right: 0px;
+//           width: 85%;
+//           max-height: 338px;
+//           .title {
+//             margin-left: 32px;
+//             font-size: 40px;
+//           }
+//           .text {
+//             margin-left: 32px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // Set width for mobile screens
+// @media (max-width: 650px) {
+//   .container__contact {
+//     width: 80%;
+//     .main {
+//       align-items: center;
+//       .hero-section {
+//         .heading--large {
+//           display: none;
+//         }
+//         .hero-image {
+//           width: 100%;
+//           max-height: 400px;
+//         }
+//         .content {
+//           left: 0px;
+//           top: 350px;
+//           width: 90%;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // set width for mobile screen
+// @media (max-width: 400px) {
+//   .container__contact {
+//     width: 100%;
+//     .main {
+//       .hero-section {
+//         .hero-image {
+//           background: url(/assets/contact/mobile/image-hero.jpg) no-repeat
+//             center center / cover;
+//           max-height: 240px;
+//         }
+//         .content {
+//           top: 200px;
+//         }
+//       }
+//     }
+//   }
+// }
