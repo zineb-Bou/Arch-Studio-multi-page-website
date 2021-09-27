@@ -71,6 +71,16 @@
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+      position: relative;
+      &::before {
+        content: ' ';
+        width: 100px;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $Light-Grey;
+      }
       .content {
         width: 40%;
         display: flex;
