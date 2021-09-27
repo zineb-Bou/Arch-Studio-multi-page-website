@@ -134,8 +134,44 @@
         grid-row: 1/2;
       }
       .leader-card {
-        border: 1px solid red;
-        // justify-self: end;
+        .social-media-links {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          max-width: 100px;
+          visibility: hidden;
+          .twitter-icon {
+            width: 40px;
+            height: 33px;
+            fill: $Very-Dark-Blue;
+            display: inline-block;
+          }
+          .linkedin-icon {
+            width: 40px;
+            height: 40px;
+            fill: $Very-Dark-Blue;
+            display: inline-block;
+          }
+        }
+        .name {
+          font-size: $font-size-h3;
+          font-weight: $bold;
+          color: $Very-Dark-Blue;
+          line-height: 25px;
+          margin-top: 32px;
+          margin-bottom: 8px;
+        }
+        .occupation {
+          font-size: $font-size-body;
+          color: $Medium-Grey;
+          line-height: 25px;
+          margin-bottom: 8px;
+        }
+        .avatar {
+          width: 100%;
+          max-width: 350px;
+        }
         &.card-1 {
           grid-column: 2/3;
           grid-row: 1/2;
@@ -152,13 +188,11 @@
           grid-column: 3/3;
           grid-row: 2/3;
         }
-        .name {
-          font-size: $font-size-h3;
-          font-weight: $bold;
-          color: $Very-Dark-Blue;
-          line-height: 25px;
-          margin-bottom: 2px;
-        }
+      }
+    }
+  }
+}
+
         .occupation {
           font-size: $font-size-body;
           color: $Medium-Grey;
