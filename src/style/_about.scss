@@ -345,3 +345,35 @@
     }
   }
 }
+
+// set width for mobile screen
+@media (max-width: 400px) {
+  .container__about {
+    width: 100%;
+    .main {
+      .hero-section {
+        .hero-image {
+          background: url(/assets/about/mobile/image-hero.jpg) no-repeat center
+            center / cover;
+          max-height: 240px;
+        }
+        .content {
+          top: 200px;
+        }
+      }
+      .heritage-section {
+        &::before {
+          margin-left: 32px;
+        }
+        .content {
+          .title {
+            margin-left: 32px;
+          }
+          .text {
+            margin-left: 32px;
+          }
+        }
+      }
+    }
+  }
+}
