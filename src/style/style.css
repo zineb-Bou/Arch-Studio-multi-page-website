@@ -124,36 +124,40 @@ p {
   position: relative;
 }
 
-.header .open_menu_btn {
-  border: none;
-  background-color: transparent;
-  visibility: hidden;
+.header .btn-wrapper {
   position: absolute;
   right: 18px;
   top: 50%;
   transform: translateY(-50%);
+  visibility: hidden;
 }
 
-.header .open_menu_btn #hamburger-icon {
+.header .btn-wrapper .menu_btn {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  height: 24px;
+  width: 24px;
+}
+
+.header .btn-wrapper .menu_btn #hamburger-icon {
   width: 24px;
   height: 17px;
-  fill: #1b1d23;
-}
-
-.header .close_menu_btn {
-  border: none;
-  background-color: transparent;
-  visibility: hidden;
   position: absolute;
-  right: 18px;
+  fill: #1b1d23;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%);
 }
 
-.header .close_menu_btn #close-icon {
+.header .btn-wrapper .menu_btn #close-icon {
   width: 20px;
   height: 21px;
   fill: #1b1d23;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .header .logo {
@@ -262,10 +266,7 @@ p {
     width: 90%;
     align-self: center;
   }
-  .header .open_menu_btn {
-    visibility: visible;
-  }
-  .header .close_menu_btn {
+  .header .btn-wrapper .menu_btn #hamburger-icon {
     visibility: visible;
   }
   .header .nav {
@@ -1322,7 +1323,6 @@ p {
   height: 560px;
   grid-column: 1/-1;
   grid-row: 2/3;
-  background-color: red;
 }
 
 .container__contact .main .form-section {
