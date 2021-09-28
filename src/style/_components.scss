@@ -122,13 +122,13 @@
     right: 18px;
     top: 50%;
     transform: translateY(-50%);
-    visibility: hidden;
+    display: none;
     .menu_btn {
       border: none;
       background-color: transparent;
       position: relative;
-      height: 24px;
-      width: 24px;
+      height: 30px;
+      width: 30px;
       #hamburger-icon {
         width: 24px;
         height: 17px;
@@ -136,7 +136,7 @@
         fill: $Very-Dark-Blue;
         top: 50%;
         left: 50%;
-        transform: translate(-50%);
+        transform: translate(-50%, -50%);
       }
       #close-icon {
         width: 20px;
@@ -145,7 +145,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%);
+        transform: translate(-50%, -50%);
       }
     }
   }
@@ -252,9 +252,10 @@
     width: 90%;
     align-self: center;
     .btn-wrapper {
+      display: inline;
       .menu_btn {
-        #hamburger-icon {
-          visibility: visible;
+        #close-icon {
+          visibility: hidden;
         }
       }
     }
@@ -273,6 +274,9 @@
       right: 0;
       & > a {
         color: $Very-Dark-Blue;
+      }
+      &.show {
+        visibility: visible;
       }
     }
   }
