@@ -117,34 +117,39 @@
   align-items: center;
   width: 100%;
   position: relative;
-  .open_menu_btn {
-    border: none;
-    background-color: transparent;
-    visibility: hidden;
+  .btn-wrapper {
     position: absolute;
     right: 18px;
     top: 50%;
     transform: translateY(-50%);
-    #hamburger-icon {
+    visibility: hidden;
+    .menu_btn {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      height: 24px;
       width: 24px;
-      height: 17px;
-      fill: $Very-Dark-Blue;
+      #hamburger-icon {
+        width: 24px;
+        height: 17px;
+        position: absolute;
+        fill: $Very-Dark-Blue;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      #close-icon {
+        width: 20px;
+        height: 21px;
+        fill: $Very-Dark-Blue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
   }
-  .close_menu_btn {
-    border: none;
-    background-color: transparent;
-    visibility: hidden;
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    #close-icon {
-      width: 20px;
-      height: 21px;
-      fill: $Very-Dark-Blue;
-    }
-  }
+
   .logo {
     fill: $Very-Dark-Blue;
     width: 97px;
@@ -240,18 +245,18 @@
     }
   }
 }
-
 // set components width for tablet screens
 @media (max-width: 600px) {
   .header {
     min-width: 311px;
     width: 90%;
     align-self: center;
-    .open_menu_btn {
-      visibility: visible;
-    }
-    .close_menu_btn {
-      visibility: visible;
+    .btn-wrapper {
+      .menu_btn {
+        #hamburger-icon {
+          visibility: visible;
+        }
+      }
     }
     .nav {
       visibility: hidden;
