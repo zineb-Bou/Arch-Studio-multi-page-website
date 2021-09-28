@@ -103,8 +103,7 @@ p {
 }
 
 .nav {
-  margin: 0 18px;
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
 }
@@ -164,10 +163,6 @@ p {
   margin-right: 64px;
 }
 
-.header .nav {
-  width: 300px;
-}
-
 .footer {
   width: 85%;
   height: 150px;
@@ -189,6 +184,7 @@ p {
   background-color: #1b1d23;
   display: grid;
   place-items: center;
+  margin-right: 64px;
 }
 
 .footer .nav-wrapper .logo-wraper .logo {
@@ -216,18 +212,19 @@ p {
   width: 1px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .footer {
     width: 100%;
   }
   .heading--large {
-    font-size: 18vw;
+    font-size: 16vw;
     letter-spacing: -3px;
     margin: 0;
+    text-align: left;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .footer {
     background-color: #f0f0f5;
     display: flex;
@@ -247,8 +244,10 @@ p {
     align-items: center;
     height: 150px;
     margin-top: 32px;
+    padding: 0;
   }
   .footer .nav-wrapper .logo-wraper {
+    margin: 0;
     margin-top: -80px;
   }
   .footer .cta {
@@ -257,10 +256,11 @@ p {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   .header {
     min-width: 311px;
     width: 90%;
+    align-self: center;
   }
   .header .open_menu_btn {
     visibility: visible;
@@ -289,16 +289,11 @@ p {
 
 .container__home {
   width: 85%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .container__home .main {
   margin-top: 56px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .container__home .main .carousel {
@@ -510,39 +505,6 @@ p {
 }
 
 @media (max-width: 900px) {
-  .container__home {
-    width: 80%;
-  }
-  .container__home .main .portfolio-section {
-    width: 100%;
-    column-gap: 0;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .container__home .main .portfolio-section .btn-wrapper {
-    grid-column: 2/3;
-  }
-  .container__home .main .portfolio-section .clickable-card {
-    height: 240px;
-    width: 100%;
-  }
-  .container__home .main .portfolio-section .clickable-card.card-1 {
-    background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
-    grid-column: 1/3;
-    grid-row: 2/3;
-  }
-  .container__home .main .portfolio-section .clickable-card.card-2 {
-    background: url(/assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
-    grid-column: 1/3;
-    grid-row: 3/4;
-  }
-  .container__home .main .portfolio-section .clickable-card.card-3 {
-    background: url(/assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
-    grid-column: 1/3;
-    grid-row: 4/5;
-  }
-}
-
-@media (max-width: 700px) {
   .container__home .main .carousel {
     justify-content: center;
     background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat top center/cover;
@@ -579,14 +541,44 @@ p {
     margin-left: 0;
     margin-left: 12px;
   }
-}
-
-@media (max-width: 550px) {
-  .container__home {
+  .container__home .main .portfolio-section {
+    width: 100%;
+    column-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container__home .main .portfolio-section .btn-wrapper {
+    grid-column: 2/3;
+  }
+  .container__home .main .portfolio-section .clickable-card {
+    height: 240px;
     width: 100%;
   }
+  .container__home .main .portfolio-section .clickable-card.card-1 {
+    background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .container__home .main .portfolio-section .clickable-card.card-2 {
+    background: url(/assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .container__home .main .portfolio-section .clickable-card.card-3 {
+    background: url(/assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+}
+
+@media (max-width: 600px) {
+  .container__home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .container__home .main {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   .container__home .main .carousel {
     background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat top center/cover;
@@ -602,7 +594,7 @@ p {
   }
   .container__home .main .about-us-section .about-us__content {
     margin-left: 0;
-    margin-left: 12px;
+    margin-left: 10px;
   }
   .container__home .main .portfolio-section {
     width: 90%;
@@ -628,23 +620,17 @@ p {
     visibility: hidden;
   }
   .container__home .main .portfolio-section .clickable-card.card-1 {
-    background: url(/assets/portfolio/mobile/image-228b.jpg) no-repeat center center/cover;
     grid-column: 1/2;
   }
   .container__home .main .portfolio-section .clickable-card.card-2 {
-    background: url(/assets/portfolio/mobile/image-del-sol.jpg) no-repeat center center/cover;
     grid-column: 1/2;
   }
   .container__home .main .portfolio-section .clickable-card.card-3 {
-    background: url(/assets/portfolio/mobile/image-edelweiss.jpg) no-repeat center center/cover;
     grid-column: 1/2;
   }
 }
 
 .container__portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 85%;
 }
 
@@ -743,10 +729,9 @@ p {
   opacity: 0.8;
 }
 
-@media (max-width: 850px) {
-  .container__portfolio {
-    align-items: center;
-    width: 80%;
+@media (max-width: 900px) {
+  .container__portfolio .header {
+    width: 100%;
   }
   .container__portfolio .main {
     grid-template-columns: repeat(1, 1fr);
@@ -885,7 +870,7 @@ p {
   position: absolute;
   right: -100px;
   bottom: 0;
-  width: 67%;
+  width: 65%;
 }
 
 .container__about .main .hero-section .content .title {
@@ -1109,9 +1094,12 @@ p {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .container__about {
     width: 80%;
+  }
+  .container__about .header {
+    width: 100%;
   }
   .container__about .main {
     align-items: center;
@@ -1233,7 +1221,7 @@ p {
   position: absolute;
   right: -100px;
   bottom: 0;
-  width: 67%;
+  width: 65%;
 }
 
 .container__contact .main .hero-section .content .title {
@@ -1462,9 +1450,12 @@ p {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .container__contact {
     width: 80%;
+  }
+  .container__contact .header {
+    width: 100%;
   }
   .container__contact .main {
     align-items: center;
@@ -1481,7 +1472,14 @@ p {
     top: 350px;
     width: 90%;
   }
+  .container__contact .main .hero-section .content .title {
+    margin-left: 0;
+  }
+  .container__contact .main .hero-section .content .text {
+    margin-left: 0;
+  }
   .container__contact .main .contact__details {
+    row-gap: 50px;
     margin-top: 400px;
   }
 }

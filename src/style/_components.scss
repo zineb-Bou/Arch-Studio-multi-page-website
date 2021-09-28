@@ -100,8 +100,7 @@
 // }
 
 .nav {
-  margin: 0 18px;
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
   & > a {
@@ -152,9 +151,6 @@
     height: 40px;
     margin-right: 64px;
   }
-  .nav {
-    width: 300px;
-  }
 }
 // style footer
 .footer {
@@ -174,6 +170,7 @@
       background-color: $Very-Dark-Blue;
       display: grid;
       place-items: center;
+      margin-right: 64px;
       .logo {
         fill: $white;
         width: 97px;
@@ -201,17 +198,18 @@
   width: 1px;
 }
 // set components width for tablet screens
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .footer {
     width: 100%;
   }
   .heading--large {
-    font-size: 18vw;
+    font-size: 16vw;
     letter-spacing: -3px;
     margin: 0;
+    text-align: left;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .footer {
     background-color: $Very-Light-Grey;
     display: flex;
@@ -229,8 +227,10 @@
         align-items: center;
         height: 150px;
         margin-top: 32px;
+        padding: 0;
       }
       .logo-wraper {
+        margin: 0;
         margin-top: -80px;
       }
     }
@@ -242,10 +242,11 @@
 }
 
 // set components width for tablet screens
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   .header {
     min-width: 311px;
     width: 90%;
+    align-self: center;
     .open_menu_btn {
       visibility: visible;
     }

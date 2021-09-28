@@ -1,9 +1,7 @@
 // style layout
 .container__contact {
   width: 85%;
-  // border: 1px solid red;
   .main {
-    // border: 1px solid green;
     margin-top: 56px;
     // style the hero section
     .hero-section {
@@ -17,7 +15,6 @@
         top: 117px;
         right: 0;
         z-index: 2;
-        // border:1px solid red;
       }
       .hero-image {
         background: url(/assets/contact/desktop/image-hero.jpg) no-repeat center
@@ -37,7 +34,7 @@
         position: absolute;
         right: -100px;
         bottom: 0;
-        width: 67%;
+        width: 65%;
         .title {
           margin-bottom: 30px;
           max-width: 446px;
@@ -195,8 +192,6 @@
   }
 }
 
-// // Set width for tablet screens and
-
 // Set width for tablet screens
 @media (max-width: 900px) {
   .container__contact {
@@ -259,9 +254,12 @@
   }
 }
 // Set width for mobile screens
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .container__contact {
     width: 80%;
+    .header {
+      width: 100%;
+    }
     .main {
       align-items: center;
       .hero-section {
@@ -276,12 +274,18 @@
           left: 0px;
           top: 350px;
           width: 90%;
+          .title {
+            margin-left: 0;
+          }
+          .text {
+            margin-left: 0;
+          }
         }
       }
       .contact__details {
+        row-gap: 50px;
         margin-top: 400px;
       }
     }
   }
 }
-

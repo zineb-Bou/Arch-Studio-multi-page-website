@@ -1,16 +1,8 @@
 // style layout
 .container__about {
   width: 85%;
-  // border: 1px solid red;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   .main {
-    // border: 1px solid green;
     margin-top: 56px;
-    // display: flex;
-    // flex-direction: column;
-
     // style the hero section
     .hero-section {
       width: 100%;
@@ -42,7 +34,7 @@
         position: absolute;
         right: -100px;
         bottom: 0;
-        width: 67%;
+        width: 65%;
         .title {
           margin-bottom: 30px;
           max-width: 446px;
@@ -274,9 +266,12 @@
 }
 
 // Set width for mobile screens
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .container__about {
     width: 80%;
+    .header {
+      width: 100%;
+    }
     .main {
       align-items: center;
       .hero-section {

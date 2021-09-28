@@ -1,7 +1,4 @@
 .container__portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 85%;
   .main {
     width: 100%;
@@ -102,10 +99,11 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .container__portfolio {
-    align-items: center;
-    width: 80%;
+    .header {
+      width: 100%;
+    }
     .main {
       grid-template-columns: repeat(1, 1fr);
       justify-content: center;
@@ -170,13 +168,13 @@
   }
 }
 
+// set width fot mobile screens
 @media (max-width: 320px) {
   .container__portfolio {
     min-width: 311px;
     .main {
       grid-template-columns: repeat(1, minmax(311px, 1fr));
       justify-content: center;
-
       .clickable-card {
         height: 240px;
         width: 100%;
