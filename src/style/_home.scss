@@ -1,6 +1,14 @@
 // styling
 .container__home {
-  width: 85%;
+  width: 80%;
+  .header {
+    .herohang-down {
+      left: -230px;
+      &::before {
+        width: 230px;
+      }
+    }
+  }
   .main {
     // Carousel
     margin-top: 56px;
@@ -201,7 +209,7 @@
 }
 
 // set width for tablet screens
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .container__home {
     .main {
       .carousel {

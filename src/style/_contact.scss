@@ -1,6 +1,14 @@
 // style layout
 .container__contact {
-  width: 85%;
+  width: 80%;
+  .header {
+    .herohang-down {
+      left: -280px;
+      &::before {
+        width: 290px;
+      }
+    }
+  }
   .main {
     margin-top: 56px;
     // style the hero section
@@ -198,9 +206,8 @@
 }
 
 // Set width for tablet screens
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .container__contact {
-    width: 80%;
     .main {
       .hero-section {
         .hero-image {
