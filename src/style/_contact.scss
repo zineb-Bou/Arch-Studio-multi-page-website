@@ -149,31 +149,71 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        input {
-          height: 47px;
-          margin-bottom: 40px;
-          border: none;
-          border-bottom: 1px solid $Medium-Grey;
-          padding-left: 24px;
-          font-family: 'Spartan', sans-serif;
-          &::placeholder {
-            font-size: $font-size-body;
-            font-weight: $bold;
-            color: $Medium-Grey;
-          }
+        .name {
+          margin-bottom: 32px;
         }
-        textarea {
-          border: none;
-          border-bottom: 1px solid $Medium-Grey;
-          padding-left: 24px;
-          padding-top: 18px;
-          font-family: 'Spartan', sans-serif;
-          resize: none;
-
-          &::placeholder {
-            font-size: $font-size-body;
+        .email {
+          margin-bottom: 32px;
+        }
+        & > div {
+          position: relative;
+          .tag {
+            position: absolute;
+            right: 0;
+            bottom: 8px;
             font-weight: $bold;
-            color: $Medium-Grey;
+            font-size: 14px;
+            color: $Red;
+            visibility: hidden;
+          }
+
+          input {
+            // margin-bottom: 32px;
+            height: 47px;
+            box-sizing: border-box;
+            border: none;
+            color: $Very-Dark-Blue;
+            font-weight: $bold;
+            font-size: $font-size-body;
+            padding-left: 24px;
+            font-family: 'Spartan', sans-serif;
+            width: 100%;
+            border-bottom: 1px solid $Medium-Grey;
+            &:focus {
+              border-bottom: 2px solid $Very-Dark-Blue;
+              outline: 0; /* Removes the default blue ring */
+              /* Now, let's create our own focus style */
+              box-shadow: 0 0 0 2px transparent;
+            }
+            &::placeholder {
+              font-size: $font-size-body;
+              font-weight: $bold;
+              color: $Medium-Grey;
+            }
+          }
+          textarea {
+            border: none;
+            box-sizing: border-box;
+            width: 100%;
+            padding-left: 24px;
+            padding-top: 18px;
+            font-family: 'Spartan', sans-serif;
+            font-size: $font-size-body;
+            color: $Very-Dark-Blue;
+            font-weight: $bold;
+            resize: none;
+            border-bottom: 1px solid $Medium-Grey;
+            &:focus {
+              border-bottom: 2px solid $Very-Dark-Blue;
+              outline: 0; /* Removes the default blue ring */
+              /* Now, let's create our own focus style */
+              box-shadow: 0 0 0 2px transparent;
+            }
+            &::placeholder {
+              font-size: $font-size-body;
+              font-weight: $bold;
+              color: $Medium-Grey;
+            }
           }
         }
         .submit-btn {
@@ -182,10 +222,15 @@
           background-color: $Very-Dark-Blue;
           border: none;
           align-self: end;
+          margin-top: -2px;
           .icon-arrow {
             width: 26px;
             height: 20px;
             stroke: $white;
+            fill: transparent;
+          }
+          &:hover {
+            background-color: $Dark-Grey;
           }
         }
       }
@@ -230,7 +275,7 @@
       }
       .contact__details {
         grid-template-columns: 1fr;
-        row-gap: 18px;
+        row-gap: 48px;
         .title {
           grid-row: 1/2;
           width: 500px;
