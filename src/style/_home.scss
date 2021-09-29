@@ -13,6 +13,7 @@
     // Carousel
     margin-top: 56px;
     width: 100%;
+
     .carousel {
       background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat
         top center/cover;
@@ -39,6 +40,7 @@
         }
         .cta {
           margin-top: 40px;
+          width: 252px;
         }
         // style btn list item
         .btn-list {
@@ -127,6 +129,7 @@
         }
         .cta {
           margin-top: 32px;
+          width: 187px;
         }
       }
     }
@@ -147,7 +150,7 @@
         grid-column: 1/2;
         grid-row: 1/2;
       }
-      .btn-wrapper {
+      .cta {
         grid-column: 3/4;
         grid-row: 1/2;
         justify-self: end;

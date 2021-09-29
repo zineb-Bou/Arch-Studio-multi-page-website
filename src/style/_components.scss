@@ -57,6 +57,7 @@
   letter-spacing: -5px;
   line-height: 200px;
   text-align: right;
+  max-width: 820px;
   &::first-letter {
     text-transform: uppercase;
   }
@@ -67,7 +68,7 @@
   height: 100%;
   width: 100%;
   background-color: $Very-Dark-Blue;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .herohang-down {
