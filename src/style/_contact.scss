@@ -108,7 +108,13 @@
         .cta {
           background-color: transparent;
           padding: 0;
-          margin-top: 32px;
+          margin-top: 24px;
+          color: $Very-Dark-Blue;
+          width: 200px;
+          height: auto;
+          &:hover {
+            text-decoration: underline;
+          }
           .icon-arrow {
             stroke: $Very-Dark-Blue;
           }
