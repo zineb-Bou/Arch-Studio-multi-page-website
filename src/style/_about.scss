@@ -93,7 +93,7 @@
         justify-content: flex-end;
 
         .title {
-          max-width: 445px;
+          // max-width: 445px;
           margin-bottom: 32px;
           font-size: $font-size-h2;
           font-weight: $bold;
@@ -101,13 +101,12 @@
           line-height: 56px;
           letter-spacing: -2px;
           margin-top: 12px;
-
           &::first-letter {
             text-transform: uppercase;
           }
         }
         .text {
-          max-width: 445px;
+          // max-width: 445px;
           font-size: $font-size-body;
           font-weight: $medium;
           color: $Medium-Grey;
@@ -369,12 +368,8 @@
           margin-left: 32px;
         }
         .content {
-          .title {
-            margin-left: 32px;
-          }
-          .text {
-            margin-left: 32px;
-          }
+          margin-left: 32px;
+          margin-right: 32px;
         }
       }
     }
