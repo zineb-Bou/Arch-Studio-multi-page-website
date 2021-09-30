@@ -1,9 +1,9 @@
 // styling
 .container__home {
-  width: 80%;
+  width: 75%;
   .header {
     .herohang-down {
-      left: -230px;
+      left: -255px;
       &::before {
         width: 230px;
       }
@@ -14,43 +14,71 @@
     margin-top: 56px;
     width: 100%;
     .carousel {
-      background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat
-        top center/cover;
       height: 720px;
       width: 100%;
       position: relative;
-      display: flex;
-      align-items: center;
-      .carousel-content {
-        width: 554px;
-        margin: 0 32px;
-        z-index: 1;
-        .title {
-          font-size: $font-size-h1-S;
-          font-weight: $bold;
-          color: $white;
+      border: 1px solid red;
+      .slider {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 9;
+        transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+        &.initial,
+        &.active {
+          opacity: 1;
+          z-index: 10;
         }
-        .text {
-          font-size: $font-size-body;
-          line-height: 25px;
-          color: $Very-Light-Grey;
-          margin-top: 14px;
+        &.slider__1 {
+          background: url(/assets/home/desktop/image-hero-paramour.jpg)
+            no-repeat top center/cover;
         }
-        .cta {
-          margin-top: 40px;
-          width: 252px;
+        &.slider__2 {
+          background: url(/assets/home/desktop/image-hero-seraph.jpg) no-repeat
+            top center/cover;
         }
-        // style btn list item
-        .btn-list {
-          list-style: none;
-          position: absolute;
-          display: flex;
-          flex-direction: row;
-          bottom: 0;
-          left: -80px;
-          padding: 0;
-          margin: 0;
+        &.slider__3 {
+          background: url(/assets/home/desktop/image-hero-federal.jpg) no-repeat
+            top center/cover;
         }
+        .carousel__content {
+          width: 554px;
+          margin: 0 170px;
+          z-index: 1;
+          .title {
+            font-size: $font-size-h1-S;
+            font-weight: $bold;
+            color: $white;
+          }
+          .text {
+            font-size: $font-size-body;
+            line-height: 25px;
+            color: $Very-Light-Grey;
+            margin-top: 14px;
+          }
+          .cta {
+            margin-top: 40px;
+            width: 252px;
+          }
+        }
+      }
+
+      // style btn list item
+      .btn-list {
+        list-style: none;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: -80px;
+        padding: 0;
+        margin: 0;
+        z-index: 100;
       }
     }
     .welcome-section {
@@ -113,7 +141,7 @@
       justify-content: center;
       .about-us__content {
         z-index: 1;
-        margin: 0 32px;
+        margin: 0 170px;
         display: flex;
         flex-direction: column;
         // width: 445px;
@@ -214,13 +242,20 @@
   .container__home {
     .main {
       .carousel {
-        justify-content: center;
-        background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat
-          top center/cover;
-        .carousel-content {
-          .btn-list {
-            visibility: hidden;
+        .slider {
+          &.slider__1 {
+            background: url(/assets/home/tablet/image-hero-paramour.jpg)
+              no-repeat top center/cover;
           }
+          .carousel__content {
+            margin: 0 64px;
+            .title {
+              font-size: 70px;
+            }
+          }
+        }
+        .btn-list {
+          visibility: hidden;
         }
       }
       // welcome section
@@ -248,6 +283,9 @@
       .about-us-section {
         background: url(/assets/home/tablet/image-small-team.jpg) no-repeat
           center center/cover;
+        .about-us__content {
+          margin: 0 64px;
+        }
       }
       // portfolio section
       .portfolio-section {
@@ -295,11 +333,16 @@
       display: flex;
       flex-direction: column;
       .carousel {
-        background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat
-          top center/cover;
-        .carousel-content {
-          .title {
-            font-size: 55px;
+        .slider {
+          &.slider__1 {
+            background: url(/assets/home/mobile/image-hero-paramour.jpg)
+              no-repeat top center/cover;
+          }
+          .carousel__content {
+            margin: 0 28px;
+            .title {
+              font-size: 60px;
+            }
           }
         }
       }
@@ -330,6 +373,9 @@
       .about-us-section {
         background: url(/assets/home/mobile/image-small-team.jpg) no-repeat
           center center/cover;
+        .about-us__content {
+          margin: 0 28px;
+        }
       }
       // portfolio section
       .portfolio-section {

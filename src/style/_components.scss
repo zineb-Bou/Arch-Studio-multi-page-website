@@ -42,6 +42,9 @@
   line-height: 25px;
   color: $Medium-Grey;
   background-color: $white;
+  &:hover {
+    background-color: $Very-Light-Grey;
+  }
   &.active {
     background-color: $Very-Dark-Blue;
     color: $white;
