@@ -25,8 +25,8 @@
         z-index: 2;
       }
       .hero-image {
-        background: url(/assets/contact/desktop/image-hero.jpg) no-repeat center
-          center/cover;
+        background: url(../../assets/contact/desktop/image-hero.jpg) no-repeat
+          center center/cover;
         width: 70%;
         height: 720px;
         position: relative;
@@ -257,7 +257,7 @@
       .hero-section {
         .hero-image {
           width: 90%;
-          background: url(/assets/contact/tablet/image-hero.jpg) no-repeat
+          background: url(../../assets/contact/tablet/image-hero.jpg) no-repeat
             center center / cover;
         }
         .content {

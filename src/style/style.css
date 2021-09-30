@@ -153,7 +153,7 @@ p {
 
 .header .btn-wrapper {
   position: absolute;
-  right: 18px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   display: none;
@@ -342,7 +342,7 @@ p {
 }
 
 .container__home .main .carousel {
-  background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat top center/cover;
+  background: url(../../assets/home/desktop/image-hero-paramour.jpg) no-repeat top center/cover;
   height: 720px;
   width: 100%;
   position: relative;
@@ -440,7 +440,7 @@ p {
 }
 
 .container__home .main .about-us-section {
-  background: url(/assets/home/desktop/image-small-team.jpg) no-repeat center center/cover;
+  background: url(../../assets/home/desktop/image-small-team.jpg) no-repeat center center/cover;
   width: 100%;
   height: 560px;
   position: relative;
@@ -534,19 +534,19 @@ p {
 }
 
 .container__home .main .portfolio-section .clickable-card.card-1 {
-  background: url(/assets/portfolio/desktop/image-228b.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-228b.jpg) no-repeat center center/cover;
   grid-column: 1/2;
   grid-row: 2/3;
 }
 
 .container__home .main .portfolio-section .clickable-card.card-2 {
-  background: url(/assets/portfolio/desktop/image-del-sol.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-del-sol.jpg) no-repeat center center/cover;
   grid-column: 2/3;
   grid-row: 2/3;
 }
 
 .container__home .main .portfolio-section .clickable-card.card-3 {
-  background: url(/assets/portfolio/desktop/image-edelweiss.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-edelweiss.jpg) no-repeat center center/cover;
   grid-column: 3/4;
   grid-row: 2/3;
 }
@@ -554,7 +554,7 @@ p {
 @media (max-width: 1000px) {
   .container__home .main .carousel {
     justify-content: center;
-    background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat top center/cover;
+    background: url(../../assets/home/tablet/image-hero-paramour.jpg) no-repeat top center/cover;
   }
   .container__home .main .carousel .carousel-content {
     margin-left: 12px;
@@ -582,7 +582,7 @@ p {
     margin-bottom: 32px;
   }
   .container__home .main .about-us-section {
-    background: url(/assets/home/tablet/image-small-team.jpg) no-repeat center center/cover;
+    background: url(../../assets/home/tablet/image-small-team.jpg) no-repeat center center/cover;
   }
   .container__home .main .about-us-section .about-us__content {
     margin-left: 0;
@@ -601,17 +601,17 @@ p {
     width: 100%;
   }
   .container__home .main .portfolio-section .clickable-card.card-1 {
-    background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
     grid-column: 1/-1;
     grid-row: 2/3;
   }
   .container__home .main .portfolio-section .clickable-card.card-2 {
-    background: url(/assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
     grid-column: 1/-1;
     grid-row: 3/4;
   }
   .container__home .main .portfolio-section .clickable-card.card-3 {
-    background: url(/assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
     grid-column: 1/-1;
     grid-row: 4/5;
   }
@@ -628,7 +628,7 @@ p {
     flex-direction: column;
   }
   .container__home .main .carousel {
-    background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat top center/cover;
+    background: url(../../assets/home/mobile/image-hero-paramour.jpg) no-repeat top center/cover;
   }
   .container__home .main .welcome-section .heading--large {
     display: none;
@@ -637,7 +637,7 @@ p {
     margin-left: 50px;
   }
   .container__home .main .about-us-section {
-    background: url(/assets/home/mobile/image-small-team.jpg) no-repeat center center/cover;
+    background: url(../../assets/home/mobile/image-small-team.jpg) no-repeat center center/cover;
   }
   .container__home .main .about-us-section .about-us__content {
     margin-left: 0;
@@ -696,51 +696,51 @@ p {
 }
 
 .container__portfolio .main .card-1-1 {
-  background: url(/assets/portfolio/desktop/image-trinity.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-trinity.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-1-2 {
-  background: url(/assets/portfolio/desktop/image-sxiv.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-sxiv.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-1-3 {
-  background: url(/assets/portfolio/desktop/image-del-sol.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-del-sol.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-2-1 {
-  background: url(/assets/portfolio/desktop/image-federal.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-federal.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-2-2 {
-  background: url(/assets/portfolio/desktop/image-paramour.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-paramour.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-2-3 {
-  background: url(/assets/portfolio/desktop/image-prototype.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-prototype.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-3-1 {
-  background: url(/assets/portfolio/desktop/image-edelweiss.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-edelweiss.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-3-2 {
-  background: url(/assets/portfolio/desktop/image-hypers.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-hypers.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-3-3 {
-  background: url(/assets/portfolio/desktop/image-seraph.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-seraph.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-4-1 {
-  background: url(/assets/portfolio/desktop/image-netcry.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-netcry.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-4-2 {
-  background: url(/assets/portfolio/desktop/image-eebox.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-eebox.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .card-4-3 {
-  background: url(/assets/portfolio/desktop/image-228b.jpg) no-repeat center center/cover;
+  background: url(../../assets/portfolio/desktop/image-228b.jpg) no-repeat center center/cover;
 }
 
 .container__portfolio .main .clickable-card {
@@ -794,40 +794,40 @@ p {
     width: 100%;
   }
   .container__portfolio .main .card-1-1 {
-    background: url(/assets/portfolio/tablet/image-trinity.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-trinity.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-1-2 {
-    background: url(/assets/portfolio/tablet/image-sxiv.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-sxiv.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-1-3 {
-    background: url(/assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-del-sol.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-2-1 {
-    background: url(/assets/portfolio/tablet/image-federal.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-federal.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-2-2 {
-    background: url(/assets/portfolio/tablet/image-paramour.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-paramour.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-2-3 {
-    background: url(/assets/portfolio/tablet/image-prototype.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-prototype.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-3-1 {
-    background: url(/assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-edelweiss.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-3-2 {
-    background: url(/assets/portfolio/tablet/image-hypers.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-hypers.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-3-3 {
-    background: url(/assets/portfolio/tablet/image-seraph.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-seraph.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-4-1 {
-    background: url(/assets/portfolio/tablet/image-netcry.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-netcry.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-4-2 {
-    background: url(/assets/portfolio/tablet/image-eebox.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-eebox.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-4-3 {
-    background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/tablet/image-228b.jpg) no-repeat center center/cover;
   }
 }
 
@@ -844,40 +844,40 @@ p {
     width: 100%;
   }
   .container__portfolio .main .card-1-1 {
-    background: url(/assets/portfolio/mobile/image-trinity.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-trinity.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-1-2 {
-    background: url(/assets/portfolio/mobile/image-sxiv.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-sxiv.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-1-3 {
-    background: url(/assets/portfolio/mobile/image-del-sol.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-del-sol.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-2-1 {
-    background: url(/assets/portfolio/mobile/image-federal.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-federal.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-2-2 {
-    background: url(/assets/portfolio/mobile/image-paramour.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-paramour.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-2-3 {
-    background: url(/assets/portfolio/mobile/image-prototype.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-prototype.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-3-1 {
-    background: url(/assets/portfolio/mobile/image-edelweiss.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-edelweiss.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-3-2 {
-    background: url(/assets/portfolio/mobile/image-hypers.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-hypers.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-3-3 {
-    background: url(/assets/portfolio/mobile/image-seraph.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-seraph.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-4-1 {
-    background: url(/assets/portfolio/mobile/image-netcry.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-netcry.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-4-2 {
-    background: url(/assets/portfolio/mobile/image-eebox.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-eebox.jpg) no-repeat center center/cover;
   }
   .container__portfolio .main .card-4-3 {
-    background: url(/assets/portfolio/mobile/image-228b.jpg) no-repeat center center/cover;
+    background: url(../../assets/portfolio/mobile/image-228b.jpg) no-repeat center center/cover;
   }
 }
 
@@ -913,7 +913,7 @@ p {
 }
 
 .container__about .main .hero-section .hero-image {
-  background: url(/assets/about/desktop/image-hero.jpg) no-repeat center center/cover;
+  background: url(../../assets/about/desktop/image-hero.jpg) no-repeat center center/cover;
   width: 70%;
   height: 720px;
   position: relative;
@@ -1011,7 +1011,7 @@ p {
   position: relative;
   width: 50%;
   height: 568px;
-  background: url(/assets/about/desktop/image-heritage.jpg) no-repeat center center/cover;
+  background: url(../../assets/about/desktop/image-heritage.jpg) no-repeat center center/cover;
 }
 
 .container__about .main .leaders-section {
@@ -1099,7 +1099,7 @@ p {
 @media (max-width: 1000px) {
   .container__about .main .hero-section .hero-image {
     width: 90%;
-    background: url(/assets/about/tablet/image-hero.jpg) no-repeat center center/cover;
+    background: url(../../assets/about/tablet/image-hero.jpg) no-repeat center center/cover;
   }
   .container__about .main .hero-section .content {
     right: 0px;
@@ -1220,7 +1220,7 @@ p {
     width: 100%;
   }
   .container__about .main .hero-section .hero-image {
-    background: url(/assets/about/mobile/image-hero.jpg) no-repeat center center/cover;
+    background: url(../../assets/about/mobile/image-hero.jpg) no-repeat center center/cover;
     max-height: 240px;
   }
   .container__about .main .hero-section .content {
@@ -1269,7 +1269,7 @@ p {
 }
 
 .container__contact .main .hero-section .hero-image {
-  background: url(/assets/contact/desktop/image-hero.jpg) no-repeat center center/cover;
+  background: url(../../assets/contact/desktop/image-hero.jpg) no-repeat center center/cover;
   width: 70%;
   height: 720px;
   position: relative;
@@ -1522,7 +1522,7 @@ p {
 @media (max-width: 1000px) {
   .container__contact .main .hero-section .hero-image {
     width: 90%;
-    background: url(/assets/contact/tablet/image-hero.jpg) no-repeat center center/cover;
+    background: url(../../assets/contact/tablet/image-hero.jpg) no-repeat center center/cover;
   }
   .container__contact .main .hero-section .content {
     right: 0px;
