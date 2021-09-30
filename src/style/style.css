@@ -352,11 +352,11 @@ p {
 
 .container__home .main .carousel .carousel-content {
   width: 554px;
-  margin-left: 100px;
+  margin: 0 32px;
   z-index: 1;
 }
 
-.container__home .main .carousel .carousel-content .heading-small {
+.container__home .main .carousel .carousel-content .title {
   font-size: 80px;
   font-weight: 700;
   color: #fff;
@@ -365,7 +365,6 @@ p {
 .container__home .main .carousel .carousel-content .text {
   font-size: 15px;
   line-height: 25px;
-  width: 445px;
   color: #f0f0f5;
   margin-top: 14px;
 }
@@ -388,7 +387,7 @@ p {
 
 .container__home .main .welcome-section {
   width: 100%;
-  margin-top: 108px;
+  margin-top: 200px;
   display: grid;
   grid-template-columns: 182px 446px auto;
 }
@@ -407,7 +406,7 @@ p {
   display: grid;
 }
 
-.container__home .main .welcome-section .content .content__title {
+.container__home .main .welcome-section .content .title {
   font-size: 56px;
   font-weight: 700;
   color: #1b1d23;
@@ -416,11 +415,11 @@ p {
   margin-bottom: 82px;
 }
 
-.container__home .main .welcome-section .content .content__title::first-letter {
+.container__home .main .welcome-section .content .title::first-letter {
   text-transform: uppercase;
 }
 
-.container__home .main .welcome-section .content .content__txt {
+.container__home .main .welcome-section .content .text {
   font-size: 15px;
   font-weight: 500;
   color: #7f8490;
@@ -452,10 +451,9 @@ p {
 
 .container__home .main .about-us-section .about-us__content {
   z-index: 1;
-  margin-left: 100px;
+  margin: 0 32px;
   display: flex;
   flex-direction: column;
-  width: 445px;
 }
 
 .container__home .main .about-us-section .about-us__content .title {
@@ -464,7 +462,6 @@ p {
   letter-spacing: -2px;
   line-height: 56px;
   color: #fff;
-  width: 445px;
 }
 
 .container__home .main .about-us-section .about-us__content .cta {
@@ -556,14 +553,12 @@ p {
     justify-content: center;
     background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat top center/cover;
   }
-  .container__home .main .carousel .carousel-content {
-    margin-left: 12px;
-  }
   .container__home .main .carousel .carousel-content .btn-list {
     visibility: hidden;
   }
   .container__home .main .welcome-section {
     grid-template-columns: 1fr;
+    position: relative;
   }
   .container__home .main .welcome-section .welcome-image {
     display: none;
@@ -583,10 +578,6 @@ p {
   }
   .container__home .main .about-us-section {
     background: url(/assets/home/tablet/image-small-team.jpg) no-repeat center center/cover;
-  }
-  .container__home .main .about-us-section .about-us__content {
-    margin-left: 0;
-    margin-left: 12px;
   }
   .container__home .main .portfolio-section {
     width: 100%;
@@ -630,18 +621,32 @@ p {
   .container__home .main .carousel {
     background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat top center/cover;
   }
+  .container__home .main .carousel .carousel-content .title {
+    font-size: 55px;
+  }
+  .container__home .main .welcome-section::before {
+    content: ' ';
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #c9cdd9;
+    margin-left: 32px;
+  }
   .container__home .main .welcome-section .heading--large {
     display: none;
   }
   .container__home .main .welcome-section .content {
-    margin-left: 50px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 100px;
+  }
+  .container__home .main .welcome-section .content .title {
+    font-size: 45px;
   }
   .container__home .main .about-us-section {
     background: url(/assets/home/mobile/image-small-team.jpg) no-repeat center center/cover;
-  }
-  .container__home .main .about-us-section .about-us__content {
-    margin-left: 0;
-    margin-left: 10px;
   }
   .container__home .main .portfolio-section {
     width: 90%;
@@ -985,7 +990,6 @@ p {
 }
 
 .container__about .main .heritage-section .content .title {
-  max-width: 445px;
   margin-bottom: 32px;
   font-size: 56px;
   font-weight: 700;
@@ -1000,7 +1004,6 @@ p {
 }
 
 .container__about .main .heritage-section .content .text {
-  max-width: 445px;
   font-size: 15px;
   font-weight: 500;
   color: #7f8490;
@@ -1229,11 +1232,9 @@ p {
   .container__about .main .heritage-section::before {
     margin-left: 32px;
   }
-  .container__about .main .heritage-section .content .title {
+  .container__about .main .heritage-section .content {
     margin-left: 32px;
-  }
-  .container__about .main .heritage-section .content .text {
-    margin-left: 32px;
+    margin-right: 32px;
   }
 }
 

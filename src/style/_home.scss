@@ -23,9 +23,9 @@
       align-items: center;
       .carousel-content {
         width: 554px;
-        margin-left: 100px;
+        margin: 0 32px;
         z-index: 1;
-        .heading-small {
+        .title {
           font-size: $font-size-h1-S;
           font-weight: $bold;
           color: $white;
@@ -33,7 +33,6 @@
         .text {
           font-size: $font-size-body;
           line-height: 25px;
-          width: 445px;
           color: $Very-Light-Grey;
           margin-top: 14px;
         }
@@ -56,7 +55,7 @@
     }
     .welcome-section {
       width: 100%;
-      margin-top: 108px;
+      margin-top: 200px;
       display: grid;
       grid-template-columns: 182px 446px auto;
       .heading--large {
@@ -70,7 +69,7 @@
         grid-row: 2/3;
         margin-top: -40px;
         display: grid;
-        .content__title {
+        .title {
           font-size: $font-size-h2;
           font-weight: $bold;
           color: $Very-Dark-Blue;
@@ -81,7 +80,7 @@
             text-transform: uppercase;
           }
         }
-        .content__txt {
+        .text {
           font-size: $font-size-body;
           font-weight: $medium;
           color: $Medium-Grey;
@@ -114,17 +113,17 @@
       justify-content: center;
       .about-us__content {
         z-index: 1;
-        margin-left: 100px;
+        margin: 0 32px;
         display: flex;
         flex-direction: column;
-        width: 445px;
+        // width: 445px;
         .title {
           font-size: $font-size-h2;
           font-weight: $bold;
           letter-spacing: -2px;
           line-height: 56px;
           color: $white;
-          width: 445px;
+          // width: 445px;
         }
         .cta {
           margin-top: 32px;
@@ -219,7 +218,6 @@
         background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat
           top center/cover;
         .carousel-content {
-          margin-left: 12px;
           .btn-list {
             visibility: hidden;
           }
@@ -228,6 +226,8 @@
       // welcome section
       .welcome-section {
         grid-template-columns: 1fr;
+        position: relative;
+
         .welcome-image {
           display: none;
         }
@@ -248,10 +248,6 @@
       .about-us-section {
         background: url(/assets/home/tablet/image-small-team.jpg) no-repeat
           center center/cover;
-        .about-us__content {
-          margin-left: 0;
-          margin-left: 12px;
-        }
       }
       // portfolio section
       .portfolio-section {
@@ -301,23 +297,39 @@
       .carousel {
         background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat
           top center/cover;
+        .carousel-content {
+          .title {
+            font-size: 55px;
+          }
+        }
       }
       // welcome section
       .welcome-section {
+        &::before {
+          content: ' ';
+          width: 100px;
+          height: 2px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $Light-Grey;
+          margin-left: 32px;
+        }
         .heading--large {
           display: none;
         }
         .content {
-          margin-left: 50px;
+          margin-left: 32px;
+          margin-right: 32px;
+          margin-top: 100px;
+          .title {
+            font-size: 45px;
+          }
         }
       }
       .about-us-section {
         background: url(/assets/home/mobile/image-small-team.jpg) no-repeat
           center center/cover;
-        .about-us__content {
-          margin-left: 0;
-          margin-left: 10px;
-        }
       }
       // portfolio section
       .portfolio-section {
