@@ -14,8 +14,8 @@
     margin-top: 56px;
     width: 100%;
     .carousel {
-      background: url(../../assets/home/desktop/image-hero-paramour.jpg)
-        no-repeat top center/cover;
+      background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat
+        top center/cover;
       height: 720px;
       width: 100%;
       position: relative;
@@ -103,7 +103,7 @@
 
     // About us section
     .about-us-section {
-      background: url(../../assets/home/desktop/image-small-team.jpg) no-repeat
+      background: url(/assets/home/desktop/image-small-team.jpg) no-repeat
         center center/cover;
       width: 100%;
       height: 560px;
@@ -188,19 +188,19 @@
           opacity: 0.8;
         }
         &.card-1 {
-          background: url(../../assets/portfolio/desktop/image-228b.jpg)
-            no-repeat center center/cover;
+          background: url(/assets/portfolio/desktop/image-228b.jpg) no-repeat
+            center center/cover;
           grid-column: 1/2;
           grid-row: 2/3;
         }
         &.card-2 {
-          background: url(../../assets/portfolio/desktop/image-del-sol.jpg)
-            no-repeat center center/cover;
+          background: url(/assets/portfolio/desktop/image-del-sol.jpg) no-repeat
+            center center/cover;
           grid-column: 2/3;
           grid-row: 2/3;
         }
         &.card-3 {
-          background: url(../../assets/portfolio/desktop/image-edelweiss.jpg)
+          background: url(/assets/portfolio/desktop/image-edelweiss.jpg)
             no-repeat center center/cover;
           grid-column: 3/4;
           grid-row: 2/3;
@@ -216,8 +216,8 @@
     .main {
       .carousel {
         justify-content: center;
-        background: url(../../assets/home/tablet/image-hero-paramour.jpg)
-          no-repeat top center/cover;
+        background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat
+          top center/cover;
         .carousel-content {
           margin-left: 12px;
           .btn-list {
@@ -246,7 +246,7 @@
         }
       }
       .about-us-section {
-        background: url(../../assets/home/tablet/image-small-team.jpg) no-repeat
+        background: url(/assets/home/tablet/image-small-team.jpg) no-repeat
           center center/cover;
         .about-us__content {
           margin-left: 0;
@@ -265,19 +265,19 @@
           height: 240px;
           width: 100%;
           &.card-1 {
-            background: url(../../assets/portfolio/tablet/image-228b.jpg)
-              no-repeat center center/cover;
+            background: url(/assets/portfolio/tablet/image-228b.jpg) no-repeat
+              center center/cover;
             grid-column: 1/-1;
             grid-row: 2/3;
           }
           &.card-2 {
-            background: url(../../assets/portfolio/tablet/image-del-sol.jpg)
+            background: url(/assets/portfolio/tablet/image-del-sol.jpg)
               no-repeat center center/cover;
             grid-column: 1/-1;
             grid-row: 3/4;
           }
           &.card-3 {
-            background: url(../../assets/portfolio/tablet/image-edelweiss.jpg)
+            background: url(/assets/portfolio/tablet/image-edelweiss.jpg)
               no-repeat center center/cover;
             grid-column: 1/-1;
             grid-row: 4/5;
@@ -299,8 +299,8 @@
       display: flex;
       flex-direction: column;
       .carousel {
-        background: url(../../assets/home/mobile/image-hero-paramour.jpg)
-          no-repeat top center/cover;
+        background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat
+          top center/cover;
       }
       // welcome section
       .welcome-section {
@@ -312,7 +312,7 @@
         }
       }
       .about-us-section {
-        background: url(../../assets/home/mobile/image-small-team.jpg) no-repeat
+        background: url(/assets/home/mobile/image-small-team.jpg) no-repeat
           center center/cover;
         .about-us__content {
           margin-left: 0;
@@ -339,17 +339,17 @@
             visibility: hidden;
           }
           &.card-1 {
-            // background: url(../../assets/portfolio/mobile/image-228b.jpg) no-repeat
+            // background: url(/assets/portfolio/mobile/image-228b.jpg) no-repeat
             //   center center/cover;
             grid-column: 1/2;
           }
           &.card-2 {
-            // background: url(../../assets/portfolio/mobile/image-del-sol.jpg)
+            // background: url(/assets/portfolio/mobile/image-del-sol.jpg)
             //   no-repeat center center/cover;
             grid-column: 1/2;
           }
           &.card-3 {
-            // background: url(../../assets/portfolio/mobile/image-edelweiss.jpg)
+            // background: url(/assets/portfolio/mobile/image-edelweiss.jpg)
             //   no-repeat center center/cover;
             grid-column: 1/2;
           }
