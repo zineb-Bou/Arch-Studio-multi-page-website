@@ -98,34 +98,45 @@ p {
   text-transform: uppercase;
 }
 
+.herohang-down {
+  top: 0;
+  left: 1.5vw;
+  width: 9vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform: translateY(-100%);
+}
+
+.herohang-down span {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 10px;
+  color: #c9cdd9;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  margin-left: calc(4.5vw - 15px);
+  height: 30px;
+}
+
+.herohang-down span::before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  height: 1px;
+  width: 100px;
+  background-color: #c9cdd9;
+}
+
 .filter {
   position: absolute;
   height: 100%;
   width: 100%;
   background-color: #1b1d23;
   opacity: 0.4;
-}
-
-.herohang-down {
-  position: absolute;
-  transform: rotate(90deg);
-  display: flex;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 10px;
-  line-height: 25px;
-  text-transform: uppercase;
-  color: #c9cdd9;
-  opacity: 0.8;
-}
-
-.herohang-down::before {
-  content: '';
-  align-self: center;
-  margin-right: 10px;
-  display: inline-block;
-  height: 2px;
-  background-color: #c9cdd9;
 }
 
 .nav {
@@ -151,8 +162,6 @@ p {
   display: flex;
   align-items: center;
   width: 100%;
-  position: relative;
-  position: relative;
 }
 
 .header .btn-wrapper {
@@ -330,14 +339,6 @@ p {
 
 .container__home {
   width: 75%;
-}
-
-.container__home .header .herohang-down {
-  left: -255px;
-}
-
-.container__home .header .herohang-down::before {
-  width: 230px;
 }
 
 .container__home .main {
@@ -734,22 +735,14 @@ p {
 }
 
 .container__portfolio {
-  width: 80%;
-}
-
-.container__portfolio .header .herohang-down {
-  left: -330px;
-}
-
-.container__portfolio .header .herohang-down::before {
-  width: 330px;
+  width: 75%;
 }
 
 .container__portfolio .main {
   width: 100%;
   margin-top: 56px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(auto-fit, 280px);
   row-gap: 15px;
   justify-content: space-between;
 }
@@ -942,14 +935,6 @@ p {
 
 .container__about {
   width: 75%;
-}
-
-.container__about .header .herohang-down {
-  left: -265px;
-}
-
-.container__about .header .herohang-down::before {
-  width: 250px;
 }
 
 .container__about .main {
@@ -1294,14 +1279,6 @@ p {
 
 .container__contact {
   width: 75%;
-}
-
-.container__contact .header .herohang-down {
-  left: -310px;
-}
-
-.container__contact .header .herohang-down::before {
-  width: 290px;
 }
 
 .container__contact .main {

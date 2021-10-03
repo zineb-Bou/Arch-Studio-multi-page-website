@@ -1,14 +1,6 @@
 // style layout
 .container__about {
   width: 75%;
-  .header {
-    .herohang-down {
-      left: -265px;
-      &::before {
-        width: 250px;
-      }
-    }
-  }
   .main {
     margin-top: 56px;
     // style the hero section
