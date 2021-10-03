@@ -162,6 +162,7 @@ p {
   display: flex;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .header .btn-wrapper {
@@ -208,7 +209,7 @@ p {
 }
 
 .footer {
-  width: 80%;
+  width: 75%;
   height: 150px;
   margin-top: 200px;
   position: relative;
