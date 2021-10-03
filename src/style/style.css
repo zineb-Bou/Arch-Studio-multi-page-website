@@ -328,7 +328,7 @@ p {
     background-color: #f0f0f5;
     z-index: 3;
     top: 95px;
-    right: -50px;
+    right: 0;
   }
   .header .nav > a {
     color: #1b1d23;
@@ -492,6 +492,8 @@ p {
 }
 
 .container__home .main .about-us-section .about-us__content {
+  width: 60%;
+  min-width: 300px;
   z-index: 1;
   margin: 0 170px;
   display: flex;
@@ -723,15 +725,6 @@ p {
   }
   .container__home .main .portfolio-section .clickable-card .large-number {
     visibility: hidden;
-  }
-  .container__home .main .portfolio-section .clickable-card.card-1 {
-    grid-column: 1/2;
-  }
-  .container__home .main .portfolio-section .clickable-card.card-2 {
-    grid-column: 1/2;
-  }
-  .container__home .main .portfolio-section .clickable-card.card-3 {
-    grid-column: 1/2;
   }
 }
 

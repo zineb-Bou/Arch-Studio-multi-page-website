@@ -64,7 +64,6 @@
           }
         }
       }
-
       // style btn list item
       .btn-list {
         list-style: none;
@@ -137,6 +136,8 @@
       flex-direction: column;
       justify-content: center;
       .about-us__content {
+        width: 60%;
+        min-width: 300px;
         z-index: 1;
         margin: 0 170px;
         display: flex;
@@ -234,7 +235,7 @@
   }
 }
 
-// set width for tablet screens
+// Set width for tablet screens
 @media (max-width: 1000px) {
   .container__home {
     .main {
@@ -323,8 +324,7 @@
   }
 }
 
-// set width for mobile screen
-
+// Set width for mobile screens
 @media (max-width: 600px) {
   .container__home {
     width: 100%;
@@ -400,21 +400,6 @@
           width: 100%;
           .large-number {
             visibility: hidden;
-          }
-          &.card-1 {
-            // background: url(/assets/portfolio/mobile/image-228b.jpg) no-repeat
-            //   center center/cover;
-            grid-column: 1/2;
-          }
-          &.card-2 {
-            // background: url(/assets/portfolio/mobile/image-del-sol.jpg)
-            //   no-repeat center center/cover;
-            grid-column: 1/2;
-          }
-          &.card-3 {
-            // background: url(/assets/portfolio/mobile/image-edelweiss.jpg)
-            //   no-repeat center center/cover;
-            grid-column: 1/2;
           }
         }
       }
