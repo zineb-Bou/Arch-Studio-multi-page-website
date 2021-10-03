@@ -1,6 +1,8 @@
 // style layout
 .container__about {
   width: 75%;
+  display: flex;
+  flex-direction: column;
   .main {
     margin-top: 56px;
     // style the hero section
@@ -344,7 +346,11 @@
 @media (max-width: 400px) {
   .container__about {
     width: 100%;
+    .header {
+      width: 90%;
+    }
     .main {
+      width: 100%;
       .hero-section {
         .hero-image {
           background: url(/assets/about/mobile/image-hero.jpg) no-repeat center

@@ -259,8 +259,7 @@
 // set components width for tablet screens
 @media (max-width: 600px) {
   .header {
-    min-width: 311px;
-    width: 90%;
+    // border: 1px solid red;
     align-self: center;
     .btn-wrapper {
       display: inline;

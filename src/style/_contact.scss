@@ -1,6 +1,8 @@
 // style layout
 .container__contact {
   width: 75%;
+  display: flex;
+  flex-direction: column;
   .main {
     margin-top: 56px;
     // style the hero section
@@ -79,7 +81,7 @@
         background-color: $Light-Grey;
         // margin-left: 32px;
       }
-      .title {
+      .contact__details-title {
         font-size: $font-size-h2;
         font-weight: $bold;
         color: $Very-Dark-Blue;
@@ -227,7 +229,6 @@
         }
       }
       .title {
-        width: 250px;
         align-self: center;
         font-size: $font-size-h2;
         font-weight: $bold;
@@ -256,6 +257,7 @@
           right: 0px;
           width: 85%;
           max-height: 338px;
+
           .title {
             margin-left: 32px;
             font-size: 40px;
@@ -268,9 +270,8 @@
       .contact__details {
         grid-template-columns: 1fr;
         row-gap: 48px;
-        .title {
+        .contact__details-title {
           grid-row: 1/2;
-          width: 500px;
         }
         .first-contact {
           grid-column: 1/2;
@@ -285,14 +286,12 @@
           grid-row: 4/5;
         }
       }
-
       .form-section {
         grid-template-columns: 1fr;
         row-gap: 50px;
         .title {
           grid-column: 1/2;
           grid-row: 1/2;
-          width: 480px;
         }
         .form {
           grid-column: 1/2;
@@ -334,6 +333,44 @@
       .contact__details {
         row-gap: 50px;
         margin-top: 400px;
+      }
+    }
+  }
+}
+
+// set width for mobile screen
+@media (max-width: 400px) {
+  .container__contact {
+    width: 100%;
+    align-items: center;
+    .header {
+      width: 90%;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .hero-section {
+        .hero-image {
+          background: url(/assets/contact/mobile/image-hero.jpg) no-repeat
+            center center / cover;
+          max-height: 240px;
+        }
+        .content {
+          top: 200px;
+          .title {
+            margin-left: 20px;
+          }
+          .text {
+            margin-left: 20px;
+          }
+        }
+      }
+      .contact__details {
+        width: 90%;
+      }
+      .form-section {
+        width: 90%;
       }
     }
   }

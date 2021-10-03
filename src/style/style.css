@@ -306,8 +306,6 @@ p {
 
 @media (max-width: 600px) {
   .header {
-    min-width: 311px;
-    width: 90%;
     align-self: center;
   }
   .header .btn-wrapper {
@@ -666,6 +664,9 @@ p {
     display: flex;
     flex-direction: column;
   }
+  .container__home .header {
+    width: 90%;
+  }
   .container__home .main {
     display: flex;
     flex-direction: column;
@@ -730,6 +731,8 @@ p {
 
 .container__portfolio {
   width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container__portfolio .main {
@@ -877,17 +880,20 @@ p {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   .container__portfolio {
+    align-items: center;
+  }
+  .container__portfolio .header {
+    width: 90%;
     min-width: 311px;
   }
   .container__portfolio .main {
     grid-template-columns: repeat(1, minmax(311px, 1fr));
-    justify-content: center;
+    min-width: 311px;
   }
   .container__portfolio .main .clickable-card {
     height: 240px;
-    width: 100%;
   }
   .container__portfolio .main .card-1-1 {
     background: url(/assets/portfolio/mobile/image-trinity.jpg) no-repeat center center/cover;
@@ -929,6 +935,8 @@ p {
 
 .container__about {
   width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container__about .main {
@@ -1255,6 +1263,12 @@ p {
   .container__about {
     width: 100%;
   }
+  .container__about .header {
+    width: 90%;
+  }
+  .container__about .main {
+    width: 100%;
+  }
   .container__about .main .hero-section .hero-image {
     background: url(/assets/about/mobile/image-hero.jpg) no-repeat center center/cover;
     max-height: 240px;
@@ -1273,6 +1287,8 @@ p {
 
 .container__contact {
   width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container__contact .main {
@@ -1359,7 +1375,7 @@ p {
   background-color: #c9cdd9;
 }
 
-.container__contact .main .contact__details .title {
+.container__contact .main .contact__details .contact__details-title {
   font-size: 56px;
   font-weight: 700;
   color: #1b1d23;
@@ -1532,7 +1548,6 @@ p {
 }
 
 .container__contact .main .form-section .title {
-  width: 250px;
   align-self: center;
   font-size: 56px;
   font-weight: 700;
@@ -1566,9 +1581,8 @@ p {
     grid-template-columns: 1fr;
     row-gap: 48px;
   }
-  .container__contact .main .contact__details .title {
+  .container__contact .main .contact__details .contact__details-title {
     grid-row: 1/2;
-    width: 500px;
   }
   .container__contact .main .contact__details .first-contact {
     grid-column: 1/2;
@@ -1589,7 +1603,6 @@ p {
   .container__contact .main .form-section .title {
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 480px;
   }
   .container__contact .main .form-section .form {
     grid-column: 1/2;
@@ -1628,5 +1641,39 @@ p {
   .container__contact .main .contact__details {
     row-gap: 50px;
     margin-top: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container__contact {
+    width: 100%;
+    align-items: center;
+  }
+  .container__contact .header {
+    width: 90%;
+  }
+  .container__contact .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container__contact .main .hero-section .hero-image {
+    background: url(/assets/contact/mobile/image-hero.jpg) no-repeat center center/cover;
+    max-height: 240px;
+  }
+  .container__contact .main .hero-section .content {
+    top: 200px;
+  }
+  .container__contact .main .hero-section .content .title {
+    margin-left: 20px;
+  }
+  .container__contact .main .hero-section .content .text {
+    margin-left: 20px;
+  }
+  .container__contact .main .contact__details {
+    width: 90%;
+  }
+  .container__contact .main .form-section {
+    width: 90%;
   }
 }

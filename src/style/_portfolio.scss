@@ -1,5 +1,8 @@
 .container__portfolio {
   width: 75%;
+  display: flex;
+  flex-direction: column;
+
   .main {
     width: 100%;
     margin-top: 56px;
@@ -7,7 +10,6 @@
     grid-template-columns: repeat(auto-fit, 280px);
     row-gap: 15px;
     justify-content: space-between;
-
     // placing cards
     .card-1-1 {
       background: url(/assets/portfolio/desktop/image-trinity.jpg) no-repeat
@@ -68,7 +70,6 @@
       justify-content: end;
       height: 560px;
       width: 350px;
-
       .large-number {
         font-size: $font-size-h1-L;
         font-weight: $bold;
@@ -169,15 +170,18 @@
 }
 
 // set width fot mobile screens
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   .container__portfolio {
-    min-width: 311px;
+    align-items: center;
+    .header {
+      width: 90%;
+      min-width: 311px;
+    }
     .main {
       grid-template-columns: repeat(1, minmax(311px, 1fr));
-      justify-content: center;
+      min-width: 311px;
       .clickable-card {
         height: 240px;
-        width: 100%;
       }
       .card-1-1 {
         background: url(/assets/portfolio/mobile/image-trinity.jpg) no-repeat
