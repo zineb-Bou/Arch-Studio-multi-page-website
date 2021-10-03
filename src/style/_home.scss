@@ -17,53 +17,58 @@
       height: 720px;
       width: 100%;
       position: relative;
-      border: 1px solid red;
-      .slider {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        top: 0;
-        left: 0;
-        width: 100%;
+      .carousel-container {
+        overflow: hidden;
         height: 100%;
-        opacity: 0;
-        z-index: 9;
-        transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
-        &.initial,
-        &.active {
-          opacity: 1;
-          z-index: 10;
-        }
-        &.slider__1 {
-          background: url(/assets/home/desktop/image-hero-paramour.jpg)
-            no-repeat top center/cover;
-        }
-        &.slider__2 {
-          background: url(/assets/home/desktop/image-hero-seraph.jpg) no-repeat
-            top center/cover;
-        }
-        &.slider__3 {
-          background: url(/assets/home/desktop/image-hero-federal.jpg) no-repeat
-            top center/cover;
-        }
-        .carousel__content {
-          width: 554px;
-          margin: 0 170px;
-          z-index: 1;
-          .title {
-            font-size: $font-size-h1-S;
-            font-weight: $bold;
-            color: $white;
-          }
-          .text {
-            font-size: $font-size-body;
-            line-height: 25px;
-            color: $Very-Light-Grey;
-            margin-top: 14px;
-          }
-          .cta {
-            margin-top: 40px;
-            width: 252px;
+        width: 100%;
+        position: relative;
+        .carousel__tracker {
+          height: 100%;
+          width: 100%;
+          transition: transform 1000ms ease-in;
+          .slide {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            &.slide__1 {
+              background: url(/assets/home/desktop/image-hero-paramour.jpg)
+                no-repeat top center/cover;
+            }
+            &.slide__2 {
+              background: url(/assets/home/desktop/image-hero-seraph.jpg)
+                no-repeat top center/cover;
+            }
+            &.slide__3 {
+              background: url(/assets/home/desktop/image-hero-federal.jpg)
+                no-repeat top center/cover;
+            }
+            &.slide__4 {
+              background: url(/assets/home/desktop/image-hero-trinity.jpg)
+                no-repeat top center/cover;
+            }
+            .carousel__content {
+              width: 554px;
+              margin: 0 170px;
+              z-index: 1;
+              .title {
+                font-size: $font-size-h1-S;
+                font-weight: $bold;
+                color: $white;
+              }
+              .text {
+                font-size: $font-size-body;
+                line-height: 25px;
+                color: $Very-Light-Grey;
+                margin-top: 14px;
+              }
+              .cta {
+                margin-top: 40px;
+                width: 252px;
+              }
+            }
           }
         }
       }
@@ -242,15 +247,19 @@
   .container__home {
     .main {
       .carousel {
-        .slider {
-          &.slider__1 {
-            background: url(/assets/home/tablet/image-hero-paramour.jpg)
-              no-repeat top center/cover;
-          }
-          .carousel__content {
-            margin: 0 64px;
-            .title {
-              font-size: 70px;
+        .carousel-container {
+          .carousel__tracker {
+            .slide {
+              &.slide__1 {
+                background: url(/assets/home/tablet/image-hero-paramour.jpg)
+                  no-repeat top center/cover;
+              }
+              .carousel__content {
+                margin: 0 64px;
+                .title {
+                  font-size: 70px;
+                }
+              }
             }
           }
         }
@@ -333,15 +342,19 @@
       display: flex;
       flex-direction: column;
       .carousel {
-        .slider {
-          &.slider__1 {
-            background: url(/assets/home/mobile/image-hero-paramour.jpg)
-              no-repeat top center/cover;
-          }
-          .carousel__content {
-            margin: 0 28px;
-            .title {
-              font-size: 60px;
+        .carousel-container {
+          .carousel__tracker {
+            .slide {
+              &.slide__1 {
+                background: url(/assets/home/mobile/image-hero-paramour.jpg)
+                  no-repeat top center/cover;
+              }
+              .carousel__content {
+                margin: 0 28px;
+                .title {
+                  font-size: 60px;
+                }
+              }
             }
           }
         }

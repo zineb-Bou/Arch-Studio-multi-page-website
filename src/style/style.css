@@ -349,59 +349,66 @@ p {
   height: 720px;
   width: 100%;
   position: relative;
-  border: 1px solid red;
 }
 
-.container__home .main .carousel .slider {
+.container__home .main .carousel .carousel-container {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.container__home .main .carousel .carousel-container .carousel__tracker {
+  height: 100%;
+  width: 100%;
+  transition: transform 1000ms ease-in;
+}
+
+.container__home .main .carousel .carousel-container .carousel__tracker .slide {
   position: absolute;
   display: flex;
   align-items: center;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  z-index: 9;
-  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 }
 
-.container__home .main .carousel .slider.initial, .container__home .main .carousel .slider.active {
-  opacity: 1;
-  z-index: 10;
-}
-
-.container__home .main .carousel .slider.slider__1 {
+.container__home .main .carousel .carousel-container .carousel__tracker .slide.slide__1 {
   background: url(/assets/home/desktop/image-hero-paramour.jpg) no-repeat top center/cover;
 }
 
-.container__home .main .carousel .slider.slider__2 {
+.container__home .main .carousel .carousel-container .carousel__tracker .slide.slide__2 {
   background: url(/assets/home/desktop/image-hero-seraph.jpg) no-repeat top center/cover;
 }
 
-.container__home .main .carousel .slider.slider__3 {
+.container__home .main .carousel .carousel-container .carousel__tracker .slide.slide__3 {
   background: url(/assets/home/desktop/image-hero-federal.jpg) no-repeat top center/cover;
 }
 
-.container__home .main .carousel .slider .carousel__content {
+.container__home .main .carousel .carousel-container .carousel__tracker .slide.slide__4 {
+  background: url(/assets/home/desktop/image-hero-trinity.jpg) no-repeat top center/cover;
+}
+
+.container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content {
   width: 554px;
   margin: 0 170px;
   z-index: 1;
 }
 
-.container__home .main .carousel .slider .carousel__content .title {
+.container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content .title {
   font-size: 80px;
   font-weight: 700;
   color: #fff;
 }
 
-.container__home .main .carousel .slider .carousel__content .text {
+.container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content .text {
   font-size: 15px;
   line-height: 25px;
   color: #f0f0f5;
   margin-top: 14px;
 }
 
-.container__home .main .carousel .slider .carousel__content .cta {
+.container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content .cta {
   margin-top: 40px;
   width: 252px;
 }
@@ -582,13 +589,13 @@ p {
 }
 
 @media (max-width: 1000px) {
-  .container__home .main .carousel .slider.slider__1 {
+  .container__home .main .carousel .carousel-container .carousel__tracker .slide.slide__1 {
     background: url(/assets/home/tablet/image-hero-paramour.jpg) no-repeat top center/cover;
   }
-  .container__home .main .carousel .slider .carousel__content {
+  .container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content {
     margin: 0 64px;
   }
-  .container__home .main .carousel .slider .carousel__content .title {
+  .container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content .title {
     font-size: 70px;
   }
   .container__home .main .carousel .btn-list {
@@ -659,13 +666,13 @@ p {
     display: flex;
     flex-direction: column;
   }
-  .container__home .main .carousel .slider.slider__1 {
+  .container__home .main .carousel .carousel-container .carousel__tracker .slide.slide__1 {
     background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat top center/cover;
   }
-  .container__home .main .carousel .slider .carousel__content {
+  .container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content {
     margin: 0 28px;
   }
-  .container__home .main .carousel .slider .carousel__content .title {
+  .container__home .main .carousel .carousel-container .carousel__tracker .slide .carousel__content .title {
     font-size: 60px;
   }
   .container__home .main .welcome-section::before {
