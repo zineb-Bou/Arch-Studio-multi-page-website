@@ -86,6 +86,7 @@
     transform-origin: left bottom;
     margin-left: calc(4.5vw - 15px);
     height: 30px;
+    animation: load-hangdown-span 2s 0.5s ease-out;
     &::before {
       content: '';
       margin-right: 10px;
@@ -93,9 +94,28 @@
       height: 1px;
       width: 100px;
       background-color: $Light-Grey;
+      animation: load-hangdown 2s 0.5s ease-out;
+      transform-origin: top left;
     }
   }
 }
+@keyframes load-hangdown {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes load-hangdown-span {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .filter {
   position: absolute;
   height: 100%;

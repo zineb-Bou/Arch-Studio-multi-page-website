@@ -9,6 +9,7 @@
       height: 720px;
       width: 100%;
       position: relative;
+      animation: load-image 2s 1s cubic-bezier(0, 1, 0.3, 1);
       .carousel-container {
         overflow: hidden;
         height: 100%;
@@ -82,10 +83,21 @@
       margin-top: 200px;
       display: grid;
       grid-template-columns: 182px 446px auto;
+      opacity: 0;
+      transition: opacity 1s 0.5s ease-out;
+      &.is-visible {
+        opacity: 1;
+      }
       .heading--large {
         z-index: 1;
         grid-column: 1/3;
         grid-row: 1/2;
+        transform: translateY(2em);
+        transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+        will-change: transform;
+        &.is-visible {
+          transform: translateY(0);
+        }
       }
       .content {
         width: 446px;
@@ -121,9 +133,14 @@
         margin-top: -80px;
         justify-self: end;
         align-self: end;
+        transform: translateX(10em);
+        transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+        will-change: transform;
+        &.is-visible {
+          transform: translateX(0);
+        }
       }
     }
-
     // About us section
     .about-us-section {
       background: url(/assets/home/desktop/image-small-team.jpg) no-repeat
@@ -135,6 +152,14 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      opacity: 0;
+      transform: translateY(-20em);
+      transition: transform 2s 0.5s cubic-bezier(0, 1, 0.3, 1),
+        opacity 2s 0.5s ease-out;
+      &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
       .about-us__content {
         width: 60%;
         min-width: 300px;
@@ -142,14 +167,12 @@
         margin: 0 170px;
         display: flex;
         flex-direction: column;
-        // width: 445px;
         .title {
           font-size: $font-size-h2;
           font-weight: $bold;
           letter-spacing: -2px;
           line-height: 56px;
           color: $white;
-          // width: 445px;
         }
         .cta {
           margin-top: 32px;
@@ -173,11 +196,27 @@
         color: $Very-Dark-Blue;
         grid-column: 1/2;
         grid-row: 1/2;
+        opacity: 0;
+        transform: translateX(5em);
+        transition: transform 1s 0.5s cubic-bezier(0, 1, 0.3, 1),
+          opacity 1s 0.5s ease-out;
+        &.is-visible {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
       .cta {
         grid-column: 3/4;
         grid-row: 1/2;
         justify-self: end;
+        opacity: 0;
+        transform: translateX(-10em);
+        transition: transform 1s 0.5s cubic-bezier(0, 1, 0.3, 1),
+          opacity 1s 0.5s ease-out;
+        &.is-visible {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
       .clickable-card {
         position: relative;
@@ -185,7 +224,12 @@
         flex-direction: column;
         justify-content: end;
         height: 560px;
-        // width: 350px;
+        transform: rotateY(0.25turn);
+        transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+        will-change: transform;
+        &.is-visible {
+          transform: rotateY(0);
+        }
         .large-number {
           font-size: $font-size-h1-L;
           font-weight: $bold;
@@ -407,5 +451,17 @@
         }
       }
     }
+  }
+}
+
+// animation
+@keyframes load-image {
+  0% {
+    opacity: 0;
+    transform: translateX(-20em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
