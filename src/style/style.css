@@ -120,6 +120,7 @@ p {
   transform-origin: left bottom;
   margin-left: calc(4.5vw - 15px);
   height: 30px;
+  animation: load-hangdown-span 2s 0.5s ease-out;
 }
 
 .herohang-down span::before {
@@ -129,6 +130,26 @@ p {
   height: 1px;
   width: 100px;
   background-color: #c9cdd9;
+  animation: load-hangdown 2s 0.5s ease-out;
+  transform-origin: top left;
+}
+
+@keyframes load-hangdown {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes load-hangdown-span {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .filter {
@@ -349,6 +370,7 @@ p {
   height: 720px;
   width: 100%;
   position: relative;
+  animation: load-image 2s 1s cubic-bezier(0, 1, 0.3, 1);
 }
 
 .container__home .main .carousel .carousel-container {
@@ -430,12 +452,25 @@ p {
   margin-top: 200px;
   display: grid;
   grid-template-columns: 182px 446px auto;
+  opacity: 0;
+  transition: opacity 1s 0.5s ease-out;
+}
+
+.container__home .main .welcome-section.is-visible {
+  opacity: 1;
 }
 
 .container__home .main .welcome-section .heading--large {
   z-index: 1;
   grid-column: 1/3;
   grid-row: 1/2;
+  transform: translateY(2em);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__home .main .welcome-section .heading--large.is-visible {
+  transform: translateY(0);
 }
 
 .container__home .main .welcome-section .content {
@@ -476,6 +511,13 @@ p {
   margin-top: -80px;
   justify-self: end;
   align-self: end;
+  transform: translateX(10em);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__home .main .welcome-section .welcome-image.is-visible {
+  transform: translateX(0);
 }
 
 .container__home .main .about-us-section {
@@ -487,6 +529,14 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(-20em);
+  transition: transform 2s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 2s 0.5s ease-out;
+}
+
+.container__home .main .about-us-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container__home .main .about-us-section .about-us__content {
@@ -527,12 +577,28 @@ p {
   color: #1b1d23;
   grid-column: 1/2;
   grid-row: 1/2;
+  opacity: 0;
+  transform: translateX(5em);
+  transition: transform 1s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 1s 0.5s ease-out;
+}
+
+.container__home .main .portfolio-section .title.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .container__home .main .portfolio-section .cta {
   grid-column: 3/4;
   grid-row: 1/2;
   justify-self: end;
+  opacity: 0;
+  transform: translateX(-10em);
+  transition: transform 1s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 1s 0.5s ease-out;
+}
+
+.container__home .main .portfolio-section .cta.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .container__home .main .portfolio-section .clickable-card {
@@ -541,6 +607,13 @@ p {
   flex-direction: column;
   justify-content: end;
   height: 560px;
+  transform: rotateY(0.25turn);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__home .main .portfolio-section .clickable-card.is-visible {
+  transform: rotateY(0);
 }
 
 .container__home .main .portfolio-section .clickable-card .large-number {
@@ -726,6 +799,17 @@ p {
   }
   .container__home .main .portfolio-section .clickable-card .large-number {
     visibility: hidden;
+  }
+}
+
+@keyframes load-image {
+  0% {
+    opacity: 0;
+    transform: translateX(-20em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -949,6 +1033,12 @@ p {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  opacity: 0;
+  transition: opacity 1s 0.5s ease-out;
+}
+
+.container__about .main .hero-section.is-visible {
+  opacity: 1;
 }
 
 .container__about .main .hero-section .heading--large {
@@ -956,6 +1046,13 @@ p {
   top: 117px;
   right: 0;
   z-index: 2;
+  transform: translateY(2em);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__about .main .hero-section .heading--large.is-visible {
+  transform: translateY(0);
 }
 
 .container__about .main .hero-section .hero-image {
@@ -964,6 +1061,13 @@ p {
   height: 720px;
   position: relative;
   z-index: -1;
+  transform: scale(0.8);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__about .main .hero-section .hero-image.is-visible {
+  transform: scale(1);
 }
 
 .container__about .main .hero-section .content {
@@ -1038,6 +1142,14 @@ p {
   line-height: 56px;
   letter-spacing: -2px;
   margin-top: 12px;
+  opacity: 0;
+  transform: translateY(5em);
+  transition: transform 2s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 1s 0.5s ease-out;
+}
+
+.container__about .main .heritage-section .content .title.is-visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .container__about .main .heritage-section .content .title::first-letter {
@@ -1049,6 +1161,14 @@ p {
   font-weight: 500;
   color: #7f8490;
   line-height: 25px;
+  opacity: 0;
+  transform: translateY(5em);
+  transition: transform 2s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 1s 0.5s ease-out;
+}
+
+.container__about .main .heritage-section .content .text.is-visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .container__about .main .heritage-section .heritage-image {
@@ -1056,6 +1176,13 @@ p {
   width: 50%;
   height: 568px;
   background: url(/assets/about/desktop/image-heritage.jpg) no-repeat center center/cover;
+  transform: translateX(10em);
+  transition: transform 2s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__about .main .heritage-section .heritage-image.is-visible {
+  transform: translateX(0);
 }
 
 .container__about .main .leaders-section {
