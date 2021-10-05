@@ -12,11 +12,22 @@
       display: flex;
       flex-direction: row;
       align-items: flex-end;
+      opacity: 0;
+      transition: opacity 1s 0.5s ease-out;
+      &.is-visible {
+        opacity: 1;
+      }
       .heading--large {
         position: absolute;
         top: 117px;
         right: 0;
         z-index: 2;
+        transform: translateY(2em);
+        transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+        will-change: transform;
+        &.is-visible {
+          transform: translateY(0);
+        }
       }
       .hero-image {
         background: url(/assets/contact/desktop/image-hero.jpg) no-repeat center
@@ -25,6 +36,12 @@
         height: 720px;
         position: relative;
         z-index: -1;
+        transform: scale(0.8);
+        transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+        will-change: transform;
+        &.is-visible {
+          transform: scale(1);
+        }
       }
       .content {
         height: 503px;
@@ -79,7 +96,6 @@
         top: 0;
         left: 0;
         background-color: $Light-Grey;
-        // margin-left: 32px;
       }
       .contact__details-title {
         font-size: $font-size-h2;
@@ -133,6 +149,15 @@
         height: 560px;
         grid-column: 1/-1;
         grid-row: 2/3;
+        opacity: 0;
+        transform: translateY(30em);
+        transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1),
+          opacity 4s 0.5s ease-out;
+        will-change: transform, opacity;
+        &.is-visible {
+          transform: translateY(0);
+          opacity: 1;
+        }
       }
     }
     .form-section {

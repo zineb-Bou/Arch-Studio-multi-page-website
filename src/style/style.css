@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   /* hide scrollbar but allow scrolling */
   -ms-overflow-style: none;
   /* for Internet Explorer, Edge */
@@ -120,7 +121,7 @@ p {
   transform-origin: left bottom;
   margin-left: calc(4.5vw - 15px);
   height: 30px;
-  animation: load-hangdown-span 2s 0.5s ease-out;
+  animation: load-hangdown-span 2s ease-out;
 }
 
 .herohang-down span::before {
@@ -130,7 +131,7 @@ p {
   height: 1px;
   width: 100px;
   background-color: #c9cdd9;
-  animation: load-hangdown 2s 0.5s ease-out;
+  animation: load-hangdown 2s ease-out;
   transform-origin: top left;
 }
 
@@ -370,7 +371,7 @@ p {
   height: 720px;
   width: 100%;
   position: relative;
-  animation: load-image 2s 1s cubic-bezier(0, 1, 0.3, 1);
+  animation: load-image 2s cubic-bezier(0, 1, 0.3, 1);
 }
 
 .container__home .main .carousel .carousel-container {
@@ -824,7 +825,7 @@ p {
   margin-top: 56px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
-  row-gap: 15px;
+  row-gap: 30px;
   justify-content: space-between;
 }
 
@@ -883,6 +884,17 @@ p {
   justify-content: end;
   height: 560px;
   width: 350px;
+  transform: translateY(5em);
+  transition: transform 2s cubic-bezier(0, 1, 0.3, 1), opacity 2s 0.5s ease-out;
+}
+
+.container__portfolio .main .clickable-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container__portfolio .main .clickable-card:hover {
+  opacity: 0.8;
 }
 
 .container__portfolio .main .clickable-card .large-number {
@@ -1428,6 +1440,12 @@ p {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  opacity: 0;
+  transition: opacity 1s 0.5s ease-out;
+}
+
+.container__contact .main .hero-section.is-visible {
+  opacity: 1;
 }
 
 .container__contact .main .hero-section .heading--large {
@@ -1435,6 +1453,13 @@ p {
   top: 117px;
   right: 0;
   z-index: 2;
+  transform: translateY(2em);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__contact .main .hero-section .heading--large.is-visible {
+  transform: translateY(0);
 }
 
 .container__contact .main .hero-section .hero-image {
@@ -1443,6 +1468,13 @@ p {
   height: 720px;
   position: relative;
   z-index: -1;
+  transform: scale(0.8);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.container__contact .main .hero-section .hero-image.is-visible {
+  transform: scale(1);
 }
 
 .container__contact .main .hero-section .content {
@@ -1563,6 +1595,15 @@ p {
   height: 560px;
   grid-column: 1/-1;
   grid-row: 2/3;
+  opacity: 0;
+  transform: translateY(30em);
+  transition: transform 4s 0.5s cubic-bezier(0, 1, 0.3, 1), opacity 4s 0.5s ease-out;
+  will-change: transform, opacity;
+}
+
+.container__contact .main .contact__details #map.is-visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .container__contact .main .form-section {

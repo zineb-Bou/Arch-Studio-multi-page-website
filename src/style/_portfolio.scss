@@ -2,13 +2,12 @@
   width: 75%;
   display: flex;
   flex-direction: column;
-
   .main {
     width: 100%;
     margin-top: 56px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 280px);
-    row-gap: 15px;
+    row-gap: 30px;
     justify-content: space-between;
     // placing cards
     .card-1-1 {
@@ -70,6 +69,16 @@
       justify-content: end;
       height: 560px;
       width: 350px;
+      transform: translateY(5em);
+      transition: transform 2s cubic-bezier(0, 1, 0.3, 1),
+        opacity 2s 0.5s ease-out;
+      &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:hover {
+        opacity: 0.8;
+      }
       .large-number {
         font-size: $font-size-h1-L;
         font-weight: $bold;
