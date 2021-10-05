@@ -380,6 +380,7 @@
     .main {
       display: flex;
       flex-direction: column;
+      animation-name: none;
       .carousel {
         .carousel-container {
           .carousel__tracker {
@@ -434,6 +435,9 @@
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
         align-self: center;
+        .title {
+          transform: none;
+        }
         .cta {
           grid-column: 1/2;
           grid-row: 5/6;

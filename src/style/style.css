@@ -12,18 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   /* hide scrollbar but allow scrolling */
-  -ms-overflow-style: none;
-  /* for Internet Explorer, Edge */
-  scrollbar-width: none;
-  /* for Firefox */
-  overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-  /* for Chrome, Safari, and Opera */
 }
 
 h1,
@@ -290,7 +279,7 @@ p {
     text-align: left;
   }
   .herohang-down {
-    visibility: hidden;
+    display: none;
   }
 }
 
@@ -744,6 +733,7 @@ p {
   .container__home .main {
     display: flex;
     flex-direction: column;
+    animation-name: none;
   }
   .container__home .main .carousel .carousel-container .carousel__tracker .slide.slide__1 {
     background: url(/assets/home/mobile/image-hero-paramour.jpg) no-repeat top center/cover;
@@ -785,6 +775,9 @@ p {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
     align-self: center;
+  }
+  .container__home .main .portfolio-section .title {
+    transform: none;
   }
   .container__home .main .portfolio-section .cta {
     grid-column: 1/2;
