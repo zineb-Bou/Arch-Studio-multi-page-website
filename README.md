@@ -17,7 +17,4 @@ It's a multi-page website (an agiecy protfolio), where the users should be able 
   - The `Email` is not formatted correctly should show "Please use a valid email address"
 - View actual locations on the contact page map. The addresses we have on the design are fictional, so you'll need to add real addresses for this bonus task.
 
-## Author
-
-- Website - [Zineb Boutaa](https://zineb-bou.github.io/)
-- Twitter - [@ZBoutaa](https://twitter.com/ZBoutaa)
+ Made with 💖 by [ZINEB](https://zineb-bou.github.io/)
